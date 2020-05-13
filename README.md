@@ -1,3 +1,1 @@
-# Aus_Usa
-# Aus_Usa
-# Aus_Usa
+This repo is for my Sharpestminds project - a travel app
