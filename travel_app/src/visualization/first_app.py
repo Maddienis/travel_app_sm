@@ -2,7 +2,6 @@ import pandas as pd
 import numpy as np 
 import streamlit as st 
 import helper as hp
-#from helper import load_data, describe_sample
 
 st.title("Travel App")
 
@@ -33,8 +32,6 @@ def load_data():
     return pd.read_csv("/Users/tristannisbet/Documents/SM/Dataframe/attractions_count.csv")
 
 
-def sort_attraction_data():
-	data.sort_values('')
 data = load_data()
 
 st.dataframe(data)
@@ -43,32 +40,18 @@ st.write("What type of tourist attraction are you most interested in?")
 attraction_type_selected = st.radio("Attraction Type", ['History', 
 	'Place of Worship', 'Activity', 'Food', 'Nature'])
 
-if attraction_type_selected == 'History':
-	city = data.sort_values('history_count', ascending=False).reset_index(drop=True).city[0]
-	st.write("You should go to ", city)
-elif attraction_type_selected == 'Place of Worship':
-	city = data.sort_values('place_of_worship_count', ascending=False).reset_index(drop=True).city[0]
-	st.write("You should go to ", city)
-elif attraction_type_selected == 'Activity':
-	city = data.sort_values('activity_count', ascending=False).reset_index(drop=True).city[0]
-	st.write("You should go to ", city)
-elif attraction_type_selected == 'Food':
-	city = data.sort_values('food_count', ascending=False).reset_index(drop=True).city[0]
-	st.write("You should go to ", city)	
-elif attraction_type_selected == 'Nature':
-	city = data.sort_values('outdoor_count', ascending=False).reset_index(drop=True).city[0]
-	st.write("You should go to ", city)
-else:
-	st.write("Will this work?")
+def which_city_attraction(radio_choice):
+	type_to_df_dict = {'History': 'history_count', 'Place of Worship': 'place_of_worship_count',
+	'Activity': 'activity_count', 'Food': 'food_count', 'Nature': 'outdoor_count'}
+	if radio_choice in type_to_df_dict:
+		city = data.sort_values(type_to_df_dict[radio_choice], ascending=False).reset_index(drop=True).city[0]
+		return city
 
+def city_output(city):
+	st.write('You should visit ', city)
 
-def which_city_attraction():
-	if attraction_type_selected == 'history':
-		city = data.sort_values('history_count', ascending=False).index[0]
-		st.write("You should go to ", city)
-
-which_city_attraction()
-
+# Funciton call
+city_output(which_city_attraction(attraction_type_selected))
 
 
 
