@@ -1,3 +1,12 @@
+import pandas as pd
+import numpy as np
+import os
+
+key = os.getenv('G_API_KEY')
+query = 'restaurants+in+Bangkok'
+base_url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?language=en&key={}'
+
+
 def make_next_url(results, base_url):
   return base_url.format(key) + '&pagetoken={}'.format(results['next_page_token'])
 
