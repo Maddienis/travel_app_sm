@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import os
 
+
 key = os.getenv('G_API_KEY')
 query = 'restaurants+in+Bangkok'
 base_url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?language=en&key={}'
@@ -26,5 +27,9 @@ def find_restaurants_az(url, data=[]):
     return find_restaurants_az(new_url, data)
   else:
     return data
+
+def create_df(json_data):
+  df = pd.json_normalize(json_data)
+  return df
 
     
