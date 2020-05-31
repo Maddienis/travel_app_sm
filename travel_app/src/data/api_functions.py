@@ -4,14 +4,27 @@ import os
 
 
 key = os.getenv('G_API_KEY')
-query = 'restaurants+in+Bangkok'
 base_url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?language=en&key={}'
+
+
+query_list = ["{}+points+of+interest", "best+restaurants+in+{}"]
+city_list = ['Portland', 'Krabi']
+
+
+
+def build_query(city_list, query_list):
+  for city in city_list:
+      for query in query_list:
+          url = base_url.format(key) + '&query={}'.format(query.format(city))
+          data = find_places_api(url)
+
+  return data
 
 
 def make_next_url(results, base_url):
   return base_url.format(key) + '&pagetoken={}'.format(results['next_page_token'])
 
-def find_restaurants_az(url, data=[]):
+def find_places_api(url, data=[]):
   print(url)
   results = requests.get(url).json()
   time.sleep(5)
@@ -20,16 +33,17 @@ def find_restaurants_az(url, data=[]):
   print(results['status'])
   if 'next_page_token' not in results.keys() and results['status']=='OK':
     print('no next')
-    return data
+    return create_df(data)
   elif results['status']=='OK':
     print('next')
     new_url = make_next_url(results, base_url=base_url)
-    return find_restaurants_az(new_url, data)
+    return find_places_api(new_url, data)
   else:
-    return data
+    return create_df(data)
 
 def create_df(json_data):
   df = pd.json_normalize(json_data)
+  # ADD TO TABLE??
   return df
 
     
