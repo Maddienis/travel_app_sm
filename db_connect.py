@@ -14,7 +14,7 @@ for row in results:
 	print(row)
 
 
-
+# pd.to_sql()
 def add_venues(conn, df):
 	sql = ''' INSERT INTO all_food(country, city, name, address, price_level,
 	rating, user_ratings_total, types, latitude, longitude, place_id)
