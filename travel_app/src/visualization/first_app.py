@@ -71,5 +71,7 @@ world_map = folium.Map(location=[38.8934, -76.9470], zoom_start=8)
 st.markdown(world_map._repr_html_(), unsafe_allow_html=True)
 
 
+if __file__.name = 
+
 
 
