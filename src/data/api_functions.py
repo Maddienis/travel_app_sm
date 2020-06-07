@@ -5,6 +5,7 @@ import json, requests
 import time
 
 key = os.getenv('G_API_KEY')
+print(key)
 base_url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?language=en&key={}'
 query_dict = {'attractions': "{}+points+of+interest",
               'restaurants': "best+restaurants+in+{}",
@@ -54,6 +55,7 @@ def create_df(json_data, city, country, id, table_name):
 
 
 def column_selection(df, table_name):
+    print(df)
     if table_name == 'attractions':
         cols_to_keep = ['country', 'city', 'name', 'formatted_address',
                         'rating', 'user_ratings_total', 'types',

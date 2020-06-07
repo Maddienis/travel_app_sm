@@ -24,4 +24,10 @@ def pipeline(city, query, country, id, query_dict):
 
 
 cities_df = db.get_city()
-city_query_selection(cities_df, api_functions.query_dict)
+
+cities_one = cities_df.iloc[0:40, :].copy()
+cities_two = cities_df.iloc[40:80, :].copy()
+cities_three = cities_df.iloc[80:120, :].copy()
+cities_four = cities_df.iloc[120:139, :].copy()
+
+city_query_selection(cities_one, api_functions.query_dict)

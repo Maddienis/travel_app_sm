@@ -2,7 +2,7 @@ import sqlite3
 import pandas as pd
 
 try:
-	conn = sqlite3.connect('/Users/tristannisbet/Documents/travel_app/notebooks/test.db')
+	conn = sqlite3.connect('/Users/tristannisbet/Documents/travel_app/places.db')
 	print('Opened database')
 
 except Exception as e:
@@ -13,7 +13,7 @@ except Exception as e:
 # Change db 
 def write_db(table_name, df):
     try:
-        conn = sqlite3.connect('/Users/tristannisbet/Documents/travel_app/notebooks/test.db')
+        conn = sqlite3.connect('/Users/tristannisbet/Documents/travel_app/places.db')
 
     except Exception as e:
         print('Error durring connection: ', str(e))
@@ -28,11 +28,10 @@ def write_db(table_name, df):
 
 
 def get_city():
-	city_df = pd.read_sql_query("select * from city_country limit 3;", conn)
+	city_df = pd.read_sql_query("select * from city_country;", conn)
 
 	return city_df
 
-df = get_city()
-print(df)
+
 #conn.close()
 
