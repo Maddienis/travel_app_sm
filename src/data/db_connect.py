@@ -1,28 +1,37 @@
 import sqlite3
+import pandas as pd
 
 try:
-	conn = sqlite3.connect('places_data.db')
+	conn = sqlite3.connect('/Users/tristannisbet/Documents/travel_app/places.db')
 	print('Opened database')
 
 except Exception as e:
 	print('Error durring connection: ', str(e))
 
 
-results = conn.execute("SELECT name FROM all_food LIMIT 3")
+# Where does my connnection function have to be?
+# Change db 
+def write_db(table_name, df):
+    try:
+        conn = sqlite3.connect('/Users/tristannisbet/Documents/travel_app/places.db')
 
-for row in results:
-	print(row)
+    except Exception as e:
+        print('Error durring connection: ', str(e))
+
+    try:
+        df.to_sql(table_name, con=conn, if_exists="append", index=False)
+        
+    except sqlite3.DatabaseError as er:
+        print('er:', er.message)
+
+    return 
 
 
-# pd.to_sql()
-def add_venues(conn, df):
-	sql = ''' INSERT INTO all_food(country, city, name, address, price_level,
-	rating, user_ratings_total, types, latitude, longitude, place_id)
-	VALUES(?,?,?,?,?,?,?,?,?,?,?) '''
+def get_city():
+	city_df = pd.read_sql_query("select * from city_country;", conn)
 
-	conn.executemany(sql, df.to_records(index=False))
-	conn.commit
-	return 
+	return city_df
 
-conn.close()
+
+#conn.close()
 
