@@ -5,7 +5,6 @@ import json, requests
 import time
 
 key = os.getenv('G_API_KEY')
-print(key)
 BASE_URL = 'https://maps.googleapis.com/maps/api/place/textsearch/json?language=en&key={}'
 QUERY_DICT = {'attractions': "{}+points+of+interest",
               'restaurants': "best+restaurants+in+{}",
@@ -14,7 +13,8 @@ QUERY_DICT = {'attractions': "{}+points+of+interest",
              'restaurants_three': 'best+restaurants+in+{}&minprice=3&maxprice=3',
              'restaurants_four': 'best+restaurants+in+{}&minprice=4&maxprice=4'}
 
-
+COLS_TO_CHECK = ['name', 'formatted_address', 'price_level',
+                'rating', 'user_ratings_total', 'types', 'place_id']
 
 def build_url(city, query, country):
     cc = [city, country]
@@ -43,6 +43,16 @@ def find_places_api(url, data=[]):
     else:
         return data 
 
+def check_json(json_data):
+
+    for col in COLS_TO_CHECK:
+        try:
+            json_data[0][col]
+
+        except Exception as e:
+            json_data[0][col] = np.nan
+
+    return json_data
 
 def create_df(json_data, city, country, id, table_name):
     df = pd.json_normalize(json_data)
@@ -55,14 +65,7 @@ def create_df(json_data, city, country, id, table_name):
 
 def column_selection(df, table_name):
     print(df)
-    if table_name == 'attractions':
-        cols_to_keep = ['country', 'city', 'name', 'formatted_address',
-                        'rating', 'user_ratings_total', 'types',
-                        'geometry.location.lat', 'geometry.location.lng', 'place_id', 'id']
-    else:
-        cols_to_keep = ['country', 'city', 'name', 'formatted_address', 'price_level',
-                        'rating', 'user_ratings_total', 'types',
-                        'geometry.location.lat', 'geometry.location.lng', 'place_id', 'id']
+    cols_to_keep = ['country', 'city'] + COLS_TO_CHECK + ['id']
     
     df = df[cols_to_keep].copy()
     df.rename(columns={'formatted_address': 'address',
