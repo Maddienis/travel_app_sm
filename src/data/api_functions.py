@@ -6,8 +6,8 @@ import time
 
 key = os.getenv('G_API_KEY')
 print(key)
-base_url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?language=en&key={}'
-query_dict = {'attractions': "{}+points+of+interest",
+BASE_URL = 'https://maps.googleapis.com/maps/api/place/textsearch/json?language=en&key={}'
+QUERY_DICT = {'attractions': "{}+points+of+interest",
               'restaurants': "best+restaurants+in+{}",
              'restaurants_one': 'best+restaurants+in+{}&minprice=1&maxprice=1',
              'restaurants_two': 'best+restaurants+in+{}&minprice=2&maxprice=2',
@@ -17,20 +17,19 @@ query_dict = {'attractions': "{}+points+of+interest",
 
 
 def build_url(city, query, country):
-    base_url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?language=en&key={}'
     cc = [city, country]
     cc = '+'.join(cc)
-    url = base_url.format(key) + '&query={}'.format(query.format(cc))
+    url = BASE_URL.format(key) + '&query={}'.format(query.format(cc))
     return url
 
 
 def make_next_page_url(results, base_url):
-    return base_url.format(key) + '&pagetoken={}'.format(results['next_page_token'])
+    return BASE_URL.format(key) + '&pagetoken={}'.format(results['next_page_token'])
 
 
 def find_places_api(url, data=[]):
     results = requests.get(url).json()
-    time.sleep(3)
+    time.sleep(7)
     data = data + results['results']
     print(results.keys())
     print(results['status'])
@@ -39,7 +38,7 @@ def find_places_api(url, data=[]):
         return data
     elif results['status']=='OK':
         print('next')
-        new_url = make_next_page_url(results, base_url=base_url)
+        new_url = make_next_page_url(results, base_url=BASE_URL)
         return find_places_api(new_url, data)
     else:
         return data 
