@@ -23,8 +23,7 @@ def city_query_selection(city_df, query_dict):
 def pipeline(city, query, country, id, query_dict, table_name):
     url = api_functions.build_url(city, query, country)
     data = api_functions.find_places_api(url)
-    json = api_functions.check_json(data)
-    df = api_functions.create_df(json, city, country, id, table_name)
+    df = api_functions.create_df(data, city, country, id, table_name)
     db.write_db(table_name, df)
     
     return df

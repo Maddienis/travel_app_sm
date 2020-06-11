@@ -13,8 +13,6 @@ QUERY_DICT = {'attractions': "{}+points+of+interest",
              'restaurants_three': 'best+restaurants+in+{}&minprice=3&maxprice=3',
              'restaurants_four': 'best+restaurants+in+{}&minprice=4&maxprice=4'}
 
-COLS_TO_CHECK = ['name', 'formatted_address', 'price_level',
-                'rating', 'user_ratings_total', 'types', 'place_id']
 
 def build_url(city, query, country):
     cc = [city, country]
@@ -43,16 +41,6 @@ def find_places_api(url, data=[]):
     else:
         return data 
 
-def check_json(json_data):
-
-    for col in COLS_TO_CHECK:
-        try:
-            json_data[0][col]
-
-        except Exception as e:
-            json_data[0][col] = np.nan
-
-    return json_data
 
 def create_df(json_data, city, country, id, table_name):
     df = pd.json_normalize(json_data)
@@ -63,10 +51,14 @@ def create_df(json_data, city, country, id, table_name):
     return df
 
 
+
 def column_selection(df, table_name):
-    print(df)
-    cols_to_keep = ['country', 'city'] + COLS_TO_CHECK + ['id']
-    
+    cols_to_keep = ['country', 'city', 'name', 'formatted_address', 'price_level',
+                'rating', 'user_ratings_total', 'types', 'place_id', 'id']
+    for col in cols_to_keep:
+        if col not in df:
+            df[col] = None
+
     df = df[cols_to_keep].copy()
     df.rename(columns={'formatted_address': 'address',
                        'geometry.location.lat': 'latitude',
