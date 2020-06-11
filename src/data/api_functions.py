@@ -31,7 +31,10 @@ def find_places_api(url, data=[]):
     data = data + results['results']
     print(results.keys())
     print(results['status'])
-    if 'next_page_token' not in results.keys() and results['status']=='OK':
+    status = results['status']
+    if status == 'ZERO_RESULTS':
+        return None
+    elif 'next_page_token' not in results.keys() and results['status']=='OK':
         print('no next')
         return data
     elif results['status']=='OK':

@@ -16,13 +16,16 @@ def city_query_selection(city_df, query_dict):
                 continue
             else:
                 print('inside else')
-                pipeline(city, query_dict[query], country, id, query_dict, table_name)
-
+                results_pipeline = pipeline(city, query_dict[query], country, id, query_dict, table_name)
+                if results_pipeline is None:
+                    continue
     return 
 
 def pipeline(city, query, country, id, query_dict, table_name):
     url = api_functions.build_url(city, query, country)
     data = api_functions.find_places_api(url)
+    if data == None:
+        return None
     df = api_functions.create_df(data, city, country, id, table_name)
     db.write_db(table_name, df)
     
