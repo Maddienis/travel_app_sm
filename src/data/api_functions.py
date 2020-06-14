@@ -33,6 +33,9 @@ def find_places_api(url, data=[]):
     print(results['status'])
     status = results['status']
     if status == 'ZERO_RESULTS':
+        file1 = open("/Users/tristannisbet/Documents/travel_app/references/zero_results.txt","a")
+        file1.write(url + '\n') 
+        file1.close()
         return None
     elif 'next_page_token' not in results.keys() and results['status']=='OK':
         print('no next')
