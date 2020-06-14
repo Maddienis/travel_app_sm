@@ -21,7 +21,7 @@ def write_db(table_name, df):
         df.to_sql(table_name, con=conn, if_exists="append", index=False)
         
     except sqlite3.DatabaseError as er:
-        print('er:', er.message)
+        print('Database Error:', er)
 
     return 
 
