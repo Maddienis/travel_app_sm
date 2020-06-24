@@ -27,7 +27,7 @@ def make_next_page_url(results, base_url):
 
 def find_places_api(url, data=[]):
     results = requests.get(url).json()
-    time.sleep(7)
+    time.sleep(5)
     data = data + results['results']
     print(results.keys())
     print(results['status'])
@@ -60,7 +60,8 @@ def create_df(json_data, city, country, id, table_name):
 
 def column_selection(df, table_name):
     cols_to_keep = ['country', 'city', 'name', 'formatted_address', 'price_level',
-                'rating', 'user_ratings_total', 'types', 'place_id', 'id']
+                'rating', 'user_ratings_total', 'types', 'geometry.location.lat', 
+                'geometry.location.lng', 'place_id', 'id']
     for col in cols_to_keep:
         if col not in df:
             df[col] = None
