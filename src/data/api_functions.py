@@ -1,51 +1,78 @@
 import pandas as pd
 import numpy as np
 import os
-
+import json, requests
+import time
 
 key = os.getenv('G_API_KEY')
-base_url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?language=en&key={}'
+BASE_URL = 'https://maps.googleapis.com/maps/api/place/textsearch/json?language=en&key={}'
+QUERY_DICT = {'attractions': "{}+points+of+interest",
+              'restaurants': "best+restaurants+in+{}",
+             'restaurants_one': 'best+restaurants+in+{}&minprice=1&maxprice=1',
+             'restaurants_two': 'best+restaurants+in+{}&minprice=2&maxprice=2',
+             'restaurants_three': 'best+restaurants+in+{}&minprice=3&maxprice=3',
+             'restaurants_four': 'best+restaurants+in+{}&minprice=4&maxprice=4'}
 
 
-query_list = ["{}+points+of+interest", "best+restaurants+in+{}"]
-city_list = ['Portland', 'Krabi']
+def build_url(city, query, country):
+    cc = [city, country]
+    cc = '+'.join(cc)
+    url = BASE_URL.format(key) + '&query={}'.format(query.format(cc))
+    return url
+
+
+def make_next_page_url(results, base_url):
+    return BASE_URL.format(key) + '&pagetoken={}'.format(results['next_page_token'])
+
+
+def find_places_api(url, data=[]):
+    results = requests.get(url).json()
+    time.sleep(5)
+    data = data + results['results']
+    print(results.keys())
+    print(results['status'])
+    status = results['status']
+    if status == 'ZERO_RESULTS':
+        file1 = open("/Users/tristannisbet/Documents/travel_app/references/zero_results.txt","a")
+        file1.write(url + '\n') 
+        file1.close()
+        return None
+    elif 'next_page_token' not in results.keys() and results['status']=='OK':
+        print('no next')
+        return data
+    elif results['status']=='OK':
+        print('next')
+        new_url = make_next_page_url(results, base_url=BASE_URL)
+        return find_places_api(new_url, data)
+    else:
+        return data 
+
+
+def create_df(json_data, city, country, id, table_name):
+    df = pd.json_normalize(json_data)
+    df['city'] = city.replace('+', ' ')
+    df['country'] = country.replace('+', ' ')
+    df['id'] = id
+    df = column_selection(df, table_name)
+    return df
 
 
 
-def build_query(city_list, query_list):
-  for city in city_list:
-      for query in query_list:
-          url = base_url.format(key) + '&query={}'.format(query.format(city))
-          data = find_places_api(url, city)
+def column_selection(df, table_name):
+    cols_to_keep = ['country', 'city', 'name', 'formatted_address', 'price_level',
+                'rating', 'user_ratings_total', 'types', 'geometry.location.lat', 
+                'geometry.location.lng', 'place_id', 'id']
+    for col in cols_to_keep:
+        if col not in df:
+            df[col] = None
 
-  return data
-
-
-def make_next_url(results, base_url):
-  return base_url.format(key) + '&pagetoken={}'.format(results['next_page_token'])
-
-def find_places_api(url, city, data=[]):
-  print(url)
-  results = requests.get(url).json()
-  time.sleep(5)
-  data = data + results['results']
-  print(results.keys())
-  print(results['status'])
-  if 'next_page_token' not in results.keys() and results['status']=='OK':
-    print('no next')
-    return create_df(data, city)
-  elif results['status']=='OK':
-    print('next')
-    new_url = make_next_url(results, base_url=base_url)
-    return find_places_api(new_url, city, data)
-  else:
-    return create_df(data, city)
-
-def create_df(json_data, city):
-  df = pd.json_normalize(json_data)
-  df['city'] = city
-  # Add id, and country also.
-  # ADD TO TABLE??
-  return df
-
+    df = df[cols_to_keep].copy()
+    df.rename(columns={'formatted_address': 'address',
+                       'geometry.location.lat': 'latitude',
+                       'geometry.location.lng': 'longitude'}, inplace=True)
+    df['types'] = df.types.astype(str)
     
+    return df
+
+
+ 
