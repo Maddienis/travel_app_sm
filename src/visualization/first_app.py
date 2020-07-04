@@ -5,7 +5,6 @@ import helper as hp
 import pydeck as pdk
 import folium
 
-
 @st.cache
 def load_data_attraction(file_path):
     attraction_data_new = pd.read_csv(file_path, index_col=[0])
@@ -13,18 +12,36 @@ def load_data_attraction(file_path):
     attraction_data_new.set_index(['city', 'country'], inplace=True)
     return attraction_data_new
 
+#That is messing up reading in country only? 
 def load_data(file_path):
 	return pd.read_csv(file_path, index_col=[0])
+
 
 
 st.title("What city should you travel to?")
 
 st.subheader('User Info')
 
-home_country = st.selectbox('What country are you from?', ('USA', 'AUS', 'Thailand'))
+
+country_list2 = pd.read_csv('/Users/tristannisbet/Documents/SM/Dataframe/Country_only.csv')
+country_list = country_list2['CountryName'].tolist()
+
+# Home Country
+home_country = st.selectbox('What country are you from?', country_list)
 st.text("")
+# Age Range
+age = st.selectbox("What is your age range?", ("15-25", "26-40", "41-55", "55+", 'Prefer not to say'))
+st.text("")
+# Sex
+sex = st.selectbox("What is your gender?", ("Female", "Male", "Prefer not to say"))
+st.text("")
+
+
+# Travel Area
 travel_area = st.selectbox('What region do you want to travel to?', ('North America', 
 	'South America', 'Europe', 'Asia', 'Oceananic', 'Africa'))
+
+
 
 st.text("")
 st.text("")
@@ -60,6 +77,8 @@ def display_map(city):
 
 data = load_data("/Users/tristannisbet/Documents/SM/Dataframe/attractions_count.csv")
 
+st.dataframe(data)
+st.write("THis is NEW")
 attraction_data = load_data_attraction("/Users/tristannisbet/Documents/SM/Dataframe/all_attractions.csv")
 
 
@@ -71,7 +90,7 @@ world_map = folium.Map(location=[38.8934, -76.9470], zoom_start=8)
 st.markdown(world_map._repr_html_(), unsafe_allow_html=True)
 
 
-if __file__.name = 
+#if __file__.name = 
 
 
 
