@@ -4,6 +4,10 @@ import streamlit as st
 import helper as hp
 import pydeck as pdk
 import folium
+import sys
+sys.path.insert(0, '/Users/tristannisbet/Documents/travel_app/src/data')
+import db_connect
+
 
 @st.cache
 def load_data_attraction(file_path):
@@ -17,23 +21,27 @@ def load_data(file_path):
 	return pd.read_csv(file_path, index_col=[0])
 
 
-
-st.title("What city should you travel to?")
-
-st.subheader('User Info')
-
-
+# Data
 country_list2 = pd.read_csv('/Users/tristannisbet/Documents/SM/Dataframe/Country_only.csv')
 country_list = country_list2['CountryName'].tolist()
+country_travel = db_connect.get_city()
+country_travel.sort_values('city', inplace=True)
+
+
+st.image("/Users/tristannisbet/Documents/travel_pic.jpg")
+st.title("What city should you travel to?")
+
+st.subheader('')
+
 
 # Home Country
-home_country = st.selectbox('What country are you from?', country_list)
+home_country = st.sidebar.selectbox('What country are you from?', country_list)
 st.text("")
 # Age Range
-age = st.selectbox("What is your age range?", ("15-25", "26-40", "41-55", "55+", 'Prefer not to say'))
+age = st.sidebar.selectbox("What is your age range?", ("15-25", "26-40", "41-55", "55+", 'Prefer not to say'))
 st.text("")
 # Sex
-sex = st.selectbox("What is your gender?", ("Female", "Male", "Prefer not to say"))
+sex = st.sidebar.selectbox("What is your gender?", ("Female", "Male", "Prefer not to say"))
 st.text("")
 
 
@@ -45,11 +53,21 @@ travel_area = st.selectbox('What region do you want to travel to?', ('North Amer
 
 st.text("")
 st.text("")
+
+st.multiselect("What cities have you traveled to that you have loved?", country_travel.city)
+st.text("")
+
+
 st.subheader("Food")
+
+one  = st.radio("Would you eat at 1", ('yes', 'n0'))
+two = st.radio("WOuld you eat at 2 ", ('Yes', 'No'))
 values = st.slider(
 	'What price level are you most likely to eat at?',
 	0, 4, (1, 2))
 st.write('Values:', values)
+
+
 
 st.write("")
 st.subheader("Tourist Attractions")
@@ -77,8 +95,7 @@ def display_map(city):
 
 data = load_data("/Users/tristannisbet/Documents/SM/Dataframe/attractions_count.csv")
 
-st.dataframe(data)
-st.write("THis is NEW")
+
 attraction_data = load_data_attraction("/Users/tristannisbet/Documents/SM/Dataframe/all_attractions.csv")
 
 
