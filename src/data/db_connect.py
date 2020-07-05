@@ -28,10 +28,10 @@ def get_city():
     except Exception as e:
         print('Error durring connection: ', str(e))
 
-
-	city_df = pd.read_sql_query("select * from city_country;", conn)
+    city_df = pd.read_sql_query("select * from city_country;", conn)
     conn.close()
-	return city_df
+    return city_df
+
 
 def check_db(table_name, city):
     try:
