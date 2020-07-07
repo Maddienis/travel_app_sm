@@ -60,6 +60,8 @@ st.text("")
 
 st.subheader("Food")
 
+food = st.radio('What price level of restaurant do you normally eat at when traveling?', ("1 - Cheap eats", "2 - Casual dining",
+ "3 - Upscale dining", "4 - Fine dining"))
 one  = st.radio("Would you eat at 1", ('yes', 'n0'))
 two = st.radio("WOuld you eat at 2 ", ('Yes', 'No'))
 values = st.slider(
