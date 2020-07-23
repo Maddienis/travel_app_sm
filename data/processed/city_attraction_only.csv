@@ -1,0 +1,141 @@
+country,city,id,amusement_park,museum,park,art_gallery,aquarium,zoo,library,movie_theater,natural_feature,place_of_worship,store
+Argentina,Buenos Aires,85,1,16,17,1,0,1,0,0,0,2,1
+Australia,Melbourne,73,2,10,14,5,1,2,1,1,0,4,2
+Australia,Sydney,55,1,8,15,2,1,2,0,0,1,2,1
+Austria,Vienna,37,1,25,7,0,1,3,1,0,0,6,2
+Belgium,Brussels,60,2,20,9,0,0,0,1,0,0,8,1
+Brazil,Rio de Janeiro,98,0,10,17,0,1,1,1,0,1,4,1
+Brazil,São Paulo,103,0,18,10,1,1,1,3,0,0,8,4
+Bulgaria,Sofia,127,0,14,12,1,0,1,0,0,0,27,0
+Canada,Montreal,105,1,19,12,0,0,2,0,1,0,12,3
+Canada,Toronto,53,1,9,24,1,0,1,0,0,0,2,1
+Canada,Vancouver,69,1,8,17,1,1,0,0,0,0,2,0
+China,Beijing,58,1,10,10,0,1,2,0,0,0,8,0
+China,Chengdu,110,1,9,8,0,0,1,0,0,2,4,0
+China,Dalian,128,1,3,11,0,1,1,0,0,0,2,0
+China,Guangzhou,21,3,5,9,0,0,2,0,0,0,5,0
+China,Guilin,80,0,2,19,0,0,1,0,0,0,1,1
+China,Hangzhou,131,2,7,5,0,0,1,0,0,0,5,0
+China,Qingdao,138,0,2,6,0,2,1,0,0,0,2,1
+China,Shanghai,30,2,7,10,1,0,1,0,0,0,8,0
+China,Shenzhen,13,3,5,14,0,0,2,0,0,0,4,0
+China,Tianjin,137,1,10,13,0,1,1,0,0,0,4,0
+China,Xi'an,119,0,10,5,0,0,1,0,0,0,12,0
+China,Xiamen,123,0,5,9,0,1,0,0,0,1,3,0
+China,Zhuhai,68,4,3,5,0,0,0,0,0,1,5,0
+Colombia,Bogota,118,2,17,17,0,0,1,0,1,0,12,1
+Czech Republic,Prague,22,1,6,6,3,0,1,0,0,0,2,0
+Denmark,Copenhagen,71,2,14,13,0,1,1,1,1,0,14,0
+Dominican Republic,Punta Cana,102,7,2,2,0,2,0,0,0,0,2,1
+Ecuador,Quito,136,2,13,18,1,0,0,0,0,0,15,0
+Egypt,Cairo,42,0,16,3,0,0,0,0,0,0,28,0
+Egypt,Hurghada,82,2,10,6,1,3,1,0,0,1,2,0
+France,Nice,92,0,11,15,0,1,1,1,0,1,9,0
+France,Paris,6,0,20,10,0,0,0,0,0,0,10,1
+Germany,Berlin,41,0,23,8,3,2,1,0,0,0,8,3
+Germany,Düsseldorf,108,0,17,12,1,1,1,0,1,0,10,1
+Germany,Frankfurt am Main,87,0,19,9,2,0,1,0,1,0,6,2
+Germany,Hamburg,115,1,28,8,0,1,1,0,0,0,12,2
+Germany,Munich,56,0,23,8,1,0,1,0,0,0,16,2
+Ghana,Accra,135,0,4,1,1,0,0,0,0,2,20,2
+Greece,Athens,43,1,15,4,0,0,1,0,0,1,14,0
+Greece,Heraklion,66,0,13,5,1,1,0,0,0,0,14,1
+Greece,Rhodes,97,1,9,4,0,0,1,0,0,1,8,2
+Hong Kong,Hong Kong,1,4,7,5,1,0,0,0,0,0,4,0
+Hungary,Budapest,62,0,10,12,1,1,1,0,0,0,6,2
+India,Agra,26,0,5,6,0,0,0,0,0,1,44,0
+India,Bangalore,100,4,8,12,3,1,1,1,0,0,42,1
+India,Chennai,36,3,7,10,0,0,1,0,0,1,56,1
+India,Delhi,11,2,10,6,1,0,1,1,0,0,15,0
+India,Jaipur,39,0,10,11,0,0,3,0,1,0,24,0
+India,Kolkata,76,5,11,11,0,0,1,1,0,0,33,1
+India,Mumbai,14,6,6,9,1,2,1,1,0,2,19,0
+India,Pune,132,2,10,18,0,0,1,0,0,0,33,1
+Indonesia,Batam,91,3,3,11,0,0,0,0,0,2,12,1
+Indonesia,Denpasar,32,3,5,8,0,0,0,0,0,3,9,0
+Indonesia,Jakarta,57,5,10,10,1,1,1,0,0,0,17,2
+Iran,Tehran,113,1,20,15,0,0,1,1,0,0,0,0
+Ireland,Dublin,50,0,19,5,3,0,1,1,0,0,8,2
+Israel,Jerusalem,61,0,13,9,0,0,1,1,0,1,27,1
+Israel,Tel Aviv,79,2,14,9,2,0,2,0,0,1,0,1
+Italy,Florence,51,0,20,4,1,0,0,0,0,0,27,3
+Italy,Milan,35,0,16,3,1,1,0,2,0,0,20,1
+Italy,Rome,16,0,17,7,2,0,0,0,0,0,14,0
+Italy,Venice,46,0,16,1,1,0,0,1,0,0,40,1
+Japan,Chiba,86,9,13,18,0,1,3,0,0,0,5,0
+Japan,Fukuoka,93,0,8,13,0,1,1,0,1,0,17,1
+Japan,Kyoto,67,3,5,7,0,1,2,0,0,0,29,2
+Japan,Osaka,28,1,12,7,0,1,0,0,0,0,6,5
+Japan,Tokyo,17,6,11,10,0,0,1,0,0,0,7,3
+Jordan,Amman,130,0,11,3,2,0,0,1,0,0,12,2
+Lebanon,Beirut,120,1,10,5,0,0,0,0,0,0,6,0
+Macau,Macau,4,2,10,6,1,0,1,0,0,0,17,0
+Malaysia,Johor Bahru,38,4,8,11,0,0,1,0,0,0,19,1
+Malaysia,Kuala Lumpur,9,2,11,12,1,2,4,0,0,1,10,2
+Malaysia,Penang Island,65,3,8,7,0,1,0,0,0,2,13,0
+Mexico,Cancun,140,7,3,6,0,2,0,0,0,0,8,0
+Mexico,Cancún,40,6,6,11,0,2,0,0,0,0,4,0
+Mexico,Mexico City,101,2,28,8,1,1,1,1,0,0,8,2
+Morocco,Casablanca,125,3,4,7,0,0,1,0,0,1,8,1
+Morocco,Marrakesh,75,3,12,7,0,0,0,1,0,0,8,0
+Netherlands,Amsterdam,25,0,29,7,2,1,1,0,1,0,12,1
+New Zealand,Auckland,78,2,8,22,2,1,2,0,0,0,2,3
+Peru,Lima,89,0,20,10,0,0,1,1,0,0,14,1
+Philippines,Cebu City,77,0,15,8,2,0,0,0,0,0,16,0
+Philippines,Manila,117,2,18,13,0,0,2,0,0,0,20,0
+Poland,Kraków,83,1,20,4,0,0,2,0,0,0,10,0
+Poland,Warsaw,74,0,22,6,2,0,1,0,0,0,12,3
+Portugal,Lisbon,63,1,18,4,0,1,1,0,0,0,13,0
+Portugal,Porto,96,0,10,6,0,0,1,0,0,1,23,5
+Romania,Bucharest,124,0,21,11,0,0,2,0,0,0,8,0
+Russia,Moscow,45,1,23,19,2,0,1,0,0,0,13,0
+Russia,Saint Petersburg,59,0,22,8,1,1,0,0,0,0,20,0
+Saudi Arabia,Dammam,64,3,7,45,0,0,0,1,1,0,2,0
+Saudi Arabia,Mecca,20,0,14,6,0,0,0,0,0,1,13,1
+Saudi Arabia,Medina,23,0,15,20,0,0,0,0,0,0,18,0
+Saudi Arabia,Riyadh,49,4,8,33,0,0,2,0,0,0,6,1
+Singapore,Singapore,5,3,7,16,0,1,3,0,0,0,4,2
+South Africa,Cape Town,116,0,12,9,0,1,0,0,0,0,0,1
+South Africa,Durban,133,3,9,13,3,1,2,1,1,0,10,2
+South Africa,Johannesburg,54,2,16,12,6,0,0,0,0,0,0,3
+South Korea,Jeju,95,9,11,11,0,0,1,0,0,2,1,1
+South Korea,Seoul,24,3,14,9,2,2,0,1,0,0,5,2
+Spain,Barcelona,33,1,19,7,0,1,0,0,0,0,12,0
+Spain,Madrid,47,2,21,12,3,1,1,2,0,0,8,1
+Sri Lanka,Colombo,122,1,8,6,1,0,1,0,0,0,22,2
+Sweden,Stockholm,88,1,21,13,4,0,0,3,1,0,12,2
+Switzerland,Geneva,121,0,17,13,1,0,2,0,0,1,10,1
+Switzerland,Zürich,104,0,11,16,1,1,1,0,0,0,8,2
+Taiwan,Taipei,19,1,12,13,0,0,1,0,0,1,8,0
+Thailand,Bangkok,2,1,13,10,2,1,1,0,0,0,18,1
+Thailand,Chiang Mai,70,0,9,6,1,0,2,0,0,0,12,4
+Thailand,Krabi,99,1,3,8,0,0,0,0,0,0,3,0
+Thailand,Pattaya,18,1,3,4,1,2,3,0,0,0,3,3
+Thailand,Phuket,15,2,6,6,0,1,3,0,0,0,4,1
+Turkey,Antalya,12,3,9,16,0,2,3,0,0,2,10,2
+Turkey,Istanbul,10,0,15,9,0,1,0,0,0,0,20,2
+Turkey,Muğla,84,0,5,40,0,0,0,0,0,0,6,0
+United Arab Emirates,Abu Dhabi,94,3,6,18,4,0,1,0,0,1,2,0
+United Arab Emirates,Dubai,7,8,6,10,0,2,2,0,0,0,2,2
+United Kingdom,Edinburgh,111,0,10,6,4,0,1,0,0,0,5,3
+United Kingdom,London,3,0,19,8,4,0,1,1,1,0,4,4
+United States,Atlanta,126,1,16,18,0,1,1,0,0,0,10,1
+United States,Boston,109,1,18,12,1,1,0,3,0,0,6,4
+United States,Chicago,107,0,19,13,0,2,3,0,0,0,4,0
+United States,Dallas,134,7,7,25,2,1,2,0,0,0,8,0
+United States,Honolulu,81,0,7,20,0,2,1,0,0,0,7,2
+United States,Houston,114,3,15,34,0,0,0,0,0,0,4,0
+United States,Las Vegas,29,0,7,15,1,1,0,0,0,0,2,7
+United States,Los Angeles,34,2,17,11,3,0,1,1,0,0,6,2
+United States,Miami,27,3,9,22,1,0,3,0,0,0,14,3
+United States,New York City,8,0,5,10,1,1,2,0,0,0,2,1
+United States,Orlando,44,19,2,8,0,3,2,0,1,0,4,1
+United States,Philadelphia,139,1,18,17,0,1,3,1,0,0,2,4
+United States,San Francisco,72,0,7,10,1,2,1,0,0,1,5,1
+United States,San Jose,112,2,13,36,0,0,1,1,0,0,6,1
+United States,Washington D.C.,106,0,16,23,1,0,1,1,0,0,6,0
+Uruguay,Montevideo,129,1,18,9,0,0,0,1,0,0,2,1
+Vietnam,Da Nang,90,1,7,5,0,0,0,0,0,0,14,1
+Vietnam,Ha Long,48,1,2,1,0,0,0,0,0,1,0,1
+Vietnam,Hanoi,52,0,11,6,0,0,1,0,0,0,9,0
+Vietnam,Ho Chi Minh City,31,5,10,10,2,0,1,0,0,0,9,2

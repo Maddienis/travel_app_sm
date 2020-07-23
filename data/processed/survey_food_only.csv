@@ -1,0 +1,154 @@
+,nationality,age,gender,food_one,food_two,food_three,food_four
+0,United States,26-40,Female,Always,Always,Rarely,Never
+1,United States,15-25,Female,Sometimes,Often,Sometimes,Sometimes
+2,United States,15-25,Female,Sometimes,Often,Sometimes,Rarely
+3,United States,26-40,Female,Sometimes,Often,Sometimes,Sometimes
+4,United States,26-40,Female,Often,Often,Rarely,Rarely
+5,United States,41-55,Female,Always,Often,Sometimes,Sometimes
+6,United States,26-40,Female,Sometimes,Often,Sometimes,Sometimes
+7,United States,55+,Male,Rarely,Often,Sometimes,Sometimes
+8,United States,55+,Female,Rarely,Sometimes,Sometimes,Sometimes
+9,United States,15-25,Female,Often,Often,Sometimes,Rarely
+10,United States,26-40,Male,Often,Sometimes,Rarely,Rarely
+11,United States,26-40,Female,Sometimes,Often,Sometimes,Sometimes
+12,Australia,26-40,Male,Often,Often,Rarely,Never
+13,United States,15-25,Female,Rarely,Often,Rarely,Never
+14,United States,26-40,Male,Often,Sometimes,Rarely,Never
+15,United States,26-40,Male,Sometimes,Often,Sometimes,Rarely
+16,India,26-40,Male,Often,Sometimes,Rarely,Never
+17,United States,15-25,Female,Often,Often,Sometimes,Rarely
+18,United States,15-25,Male,Sometimes,Sometimes,Sometimes,Sometimes
+19,Canada,26-40,Male,Sometimes,Often,Often,Rarely
+20,United States,26-40,Female,Often,Often,Sometimes,Rarely
+21,United States,55+,Female,Rarely,Often,Often,Sometimes
+22,United States,26-40,Female,Sometimes,Always,Sometimes,Never
+23,United States,26-40,Female,Sometimes,Often,Rarely,Rarely
+24,United States,15-25,Male,Often,Sometimes,Rarely,Never
+25,United States,15-25,Female,Often,Often,Never,Never
+26,United States,15-25,Male,Sometimes,Sometimes,Rarely,Never
+27,United States,15-25,Female,Rarely,Often,Often,Rarely
+28,United States,15-25,Male,Often,Sometimes,Rarely,Rarely
+29,Japan,15-25,Male,Often,Often,Sometimes,Rarely
+30,United States,15-25,Female,Sometimes,Often,Sometimes,Rarely
+31,United States,15-25,Male,Sometimes,Sometimes,Rarely,Never
+32,United States,26-40,Male,Sometimes,Often,Sometimes,Never
+33,United States,15-25,Male,Often,Sometimes,Rarely,Never
+34,United States,15-25,Male,Often,Often,Rarely,Never
+35,United States,15-25,Female,Often,Often,Sometimes,Rarely
+36,United States,15-25,Male,Always,Often,Sometimes,Rarely
+37,United States,26-40,Male,Sometimes,Sometimes,Sometimes,Rarely
+38,United States,55+,Female,Always,Always,Rarely,Never
+39,United States,15-25,Female,Sometimes,Often,Rarely,Never
+40,United States,26-40,Male,Often,Often,Rarely,Never
+41,United States,15-25,Female,Often,Often,Sometimes,Sometimes
+42,United States,15-25,Female,Sometimes,Often,Sometimes,Rarely
+43,United States,15-25,Female,Sometimes,Often,Sometimes,Sometimes
+44,China,55+,Female,Sometimes,Often,Rarely,Never
+45,United States,15-25,Male,Often,Often,Sometimes,Sometimes
+46,Philippines,15-25,Female,Always,Often,Sometimes,Rarely
+47,United States,15-25,Female,Always,Often,Rarely,Never
+48,Canada,26-40,Male,Often,Rarely,Rarely,Never
+49,China,55+,Female,Never,Sometimes,Often,Never
+50,Australia,26-40,Male,Often,Sometimes,Never,Never
+51,Israel,26-40,Male,Rarely,Always,Rarely,Never
+52,United States,15-25,Male,Often,Often,Sometimes,Rarely
+53,United States,26-40,Female,Often,Often,Sometimes,Rarely
+54,United States,26-40,Female,Often,Sometimes,Rarely,Never
+55,China,26-40,Female,Rarely,Sometimes,Sometimes,Never
+56,China,26-40,Female,Sometimes,Often,Rarely,Rarely
+57,United States,26-40,Male,Sometimes,Sometimes,Often,Rarely
+58,United States,15-25,Female,Often,Often,Rarely,Never
+59,United States,15-25,Male,Often,Sometimes,Rarely,Never
+60,United States,15-25,Female,Often,Always,Rarely,Never
+61,United States,15-25,Female,Sometimes,Often,Sometimes,Rarely
+62,United States,26-40,Male,Sometimes,Sometimes,Sometimes,Rarely
+63,United States,15-25,Female,Often,Often,Rarely,Never
+64,United States,15-25,Female,Often,Often,Sometimes,Rarely
+65,United States,15-25,Male,Often,Sometimes,Rarely,Never
+66,United States,26-40,Male,Sometimes,Often,Never,Never
+67,United States,26-40,Female,Sometimes,Often,Sometimes,Rarely
+68,United States,41-55,Female,Sometimes,Sometimes,Sometimes,Rarely
+69,United States,26-40,Male,Sometimes,Often,Sometimes,Rarely
+70,United States,41-55,Female,Often,Often,Often,Sometimes
+71,Honduras,15-25,Male,Sometimes,Often,Rarely,Never
+72,United States,15-25,Female,Sometimes,Often,Sometimes,Rarely
+73,United States,26-40,Male,Sometimes,Often,Sometimes,Rarely
+74,United States,15-25,Female,Sometimes,Often,Sometimes,Never
+75,United States,26-40,Male,Sometimes,Rarely,Often,Often
+76,Canada,26-40,Male,Often,Often,Rarely,Never
+77,United States,55+,Female,Rarely,Often,Often,Rarely
+78,United States,55+,Male,Sometimes,Often,Sometimes,Rarely
+79,United States,15-25,Female,Often,Often,Sometimes,Rarely
+80,Canada,26-40,Male,Sometimes,Often,Sometimes,Rarely
+81,United States,55+,Male,Sometimes,Often,Rarely,Never
+82,United States,15-25,Female,Often,Often,Never,Never
+83,Australia,55+,Male,Sometimes,Often,Rarely,Rarely
+84,United States,26-40,Female,Often,Often,Rarely,Rarely
+85,United States,15-25,Female,Sometimes,Always,Sometimes,Rarely
+86,United States,26-40,Female,Sometimes,Sometimes,Rarely,Never
+87,Australia,26-40,Male,Sometimes,Often,Often,Sometimes
+88,United States,26-40,Female,Sometimes,Sometimes,Rarely,Never
+89,Australia,26-40,Male,Often,Sometimes,Sometimes,Often
+90,India,26-40,Female,Sometimes,Sometimes,Often,Often
+91,India,26-40,Male,Often,Sometimes,Rarely,Never
+92,United States,15-25,Female,Often,Often,Sometimes,Sometimes
+93,United States,15-25,Female,Often,Sometimes,Rarely,Never
+94,United States,41-55,Female,Always,Often,Sometimes,Sometimes
+95,United States,26-40,Female,Sometimes,Sometimes,Sometimes,Rarely
+96,United States,55+,Male,Sometimes,Often,Sometimes,Sometimes
+97,United States,55+,Male,Sometimes,Often,Sometimes,Sometimes
+98,Australia,55+,Female,Sometimes,Often,Sometimes,Rarely
+99,Australia,26-40,Female,Sometimes,Often,Sometimes,Rarely
+100,Finland,15-25,Female,Always,Always,Sometimes,Sometimes
+101,United States,26-40,Male,Often,Often,Rarely,Never
+102,United States,26-40,Female,Always,Always,Often,Rarely
+103,Australia,26-40,Male,Often,Often,Sometimes,Rarely
+104,United States,41-55,Male,Rarely,Often,Sometimes,Rarely
+105,United States,15-25,Female,Sometimes,Often,Sometimes,Rarely
+106,United States,55+,Male,Sometimes,Sometimes,Sometimes,Rarely
+107,United States,26-40,Female,Sometimes,Always,Sometimes,Rarely
+108,United States,26-40,Male,Sometimes,Sometimes,Never,Never
+109,United States,26-40,Male,Always,Often,Often,Sometimes
+110,United States,41-55,Female,Sometimes,Often,Often,Sometimes
+111,United States,41-55,Female,Sometimes,Often,Often,Sometimes
+112,Mexico,15-25,Female,Often,Often,Sometimes,Rarely
+113,United States,26-40,Female,Often,Often,Always,Sometimes
+114,United States,26-40,Female,Sometimes,Often,Never,Never
+115,United States,41-55,Female,Sometimes,Often,Sometimes,Rarely
+116,United States,26-40,Female,Sometimes,Often,Rarely,Rarely
+117,United States,55+,Female,Rarely,Often,Rarely,Never
+118,United States,41-55,Female,Rarely,Sometimes,Often,Sometimes
+119,United States,26-40,Female,Often,Always,Sometimes,Rarely
+120,United States,55+,Female,Sometimes,Often,Sometimes,Rarely
+121,United States,55+,Female,Sometimes,Often,Sometimes,Sometimes
+122,United States,41-55,Female,Sometimes,Often,Sometimes,Sometimes
+123,United States,41-55,Female,Sometimes,Often,Sometimes,Rarely
+124,United States,26-40,Female,Sometimes,Often,Rarely,Rarely
+125,United States,26-40,Female,Sometimes,Often,Rarely,Never
+126,United States,26-40,Female,Sometimes,Often,Rarely,Never
+127,United States,26-40,Female,Sometimes,Often,Always,Rarely
+128,United States,26-40,Male,Often,Often,Rarely,Never
+129,United States,55+,Female,Sometimes,Often,Rarely,Never
+130,United States,41-55,Female,Sometimes,Often,Sometimes,Sometimes
+131,United States,26-40,Female,Often,Often,Sometimes,Rarely
+132,United States,26-40,Female,Sometimes,Always,Often,Rarely
+133,United States,26-40,Male,Sometimes,Often,Sometimes,Rarely
+134,United States,55+,Female,Sometimes,Often,Sometimes,Sometimes
+135,United States,41-55,Male,Sometimes,Often,Often,Sometimes
+136,United States,55+,Female,Sometimes,Always,Sometimes,Rarely
+137,Canada,15-25,Male,Often,Often,Sometimes,Rarely
+138,United States,15-25,Male,Sometimes,Often,Sometimes,Rarely
+139,India,26-40,Female,Sometimes,Often,Sometimes,Rarely
+140,United States,26-40,Male,Rarely,Rarely,Always,Often
+141,United States,26-40,Male,Rarely,Often,Rarely,Never
+142,Canada,41-55,Male,Often,Sometimes,Rarely,Never
+143,United States,26-40,Female,Sometimes,Often,Rarely,Never
+144,United States,55+,Female,Often,Often,Sometimes,Rarely
+145,United States,41-55,Male,Always,Always,Always,Sometimes
+146,India,26-40,Female,Always,Always,Always,Always
+147,Pakistan,26-40,Male,Often,Sometimes,Never,Rarely
+148,Canada,15-25,Male,Sometimes,Often,Rarely,Rarely
+149,United States,26-40,Male,Rarely,Often,Sometimes,Rarely
+150,United States,26-40,Male,Sometimes,Often,Rarely,Rarely
+151,United States,26-40,Male,Often,Always,Sometimes,Rarely
+152,Canada,26-40,Male,Often,Often,Rarely,Never

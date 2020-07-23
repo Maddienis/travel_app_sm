@@ -1,0 +1,670 @@
+user_id,city,rank
+0,Krabi,1
+0,Budapest,3
+0,Rome,2
+1,Las Vegas,2
+1,New York City,4
+1,Los Angeles,3
+1,Cancun,1
+1,London,5
+2,Rome,5
+2,Sydney,1
+2,Dublin,3
+2,Prague,4
+2,London,2
+3,London,2
+3,Munich,5
+3,Florence,3
+3,Rome,1
+3,Mexico City,4
+4,New York City,4
+4,Denpasar,1
+4,Shanghai,2
+4,Vancouver,5
+4,Kyoto,3
+5,San Francisco,3
+5,Honolulu,2
+5,Paris,1
+6,Boston,4
+6,Honolulu,5
+6,Las Vegas,2
+6,Rome,3
+6,London,1
+7,Melbourne,3
+7,Munich,1
+7,Amsterdam,2
+8,Washington D.C.,4
+8,San Jose,3
+8,Dallas,5
+8,Las Vegas,1
+8,San Francisco,2
+9,Montreal,1
+9,Boston,2
+10,Florence,4
+10,Taipei,5
+10,Singapore,3
+10,Shanghai,1
+10,Hong Kong,2
+11,Boston,4
+11,London,1
+11,Las Vegas,2
+11,Honolulu,5
+11,Rome,3
+12,Amsterdam,1
+12,Zurich,4
+12,Delhi,2
+12,Marrakesh,3
+13,Boston,3
+13,San Francisco,4
+13,Washington D.C.,5
+13,Barcelona,2
+13,New York City,1
+14,Los Angeles,4
+14,Vancouver,5
+14,Kyoto,1
+14,Chiang Mai,3
+14,Paris,2
+15,Cape Town,3
+15,New York City,1
+15,Chicago,4
+15,Singapore,2
+15,Washington D.C.,5
+16,Mumbai,5
+16,Delhi,3
+16,San Francisco,4
+16,Sydney,2
+16,New York City,1
+17,Montreal,1
+17,Boston,2
+18,Honolulu,2
+18,Las Vegas,3
+18,New York City,1
+19,Toronto,3
+19,Amsterdam,1
+19,Munich,5
+19,Chicago,2
+19,Vancouver,4
+20,New York City,5
+20,Chicago,2
+20,Berlin,3
+20,Washington D.C.,4
+20,Tel Aviv,1
+21,Shanghai,4
+21,Lisbon,3
+21,New York City,2
+21,Paris,1
+21,Istanbul,5
+22,Chicago,3
+22,Honolulu,1
+22,Washington D.C.,2
+23,Kyoto,5
+23,Prague,3
+23,Tokyo,1
+23,Amsterdam,4
+23,Boston,2
+24,Barcelona,2
+24,Beijing,1
+24,Dublin,3
+25,San Francisco,2
+25,Orlando,1
+26,Atlanta,3
+26,Dallas,1
+26,San Jose,2
+27,Atlanta,2
+27,Houston,3
+27,Chicago,1
+28,Washington D.C.,5
+28,Las Vegas,1
+28,Los Angeles,2
+28,San Jose,4
+28,San Francisco,3
+29,Tokyo,2
+29,Kyoto,1
+29,New York City,5
+29,Washington D.C.,3
+29,Los Angeles,4
+30,Dammam,1
+30,London,2
+30,Vienna,3
+30,Athens,5
+30,Amsterdam,4
+31,San Jose,4
+31,Manila,2
+31,Boston,1
+31,Cebu City,5
+31,Orlando,3
+32,Barcelona,2
+32,New York City,4
+32,Mexico City,1
+32,Washington D.C.,5
+32,Madrid,3
+33,Los Angeles,1
+33,Las Vegas,2
+34,Washington D.C.,1
+34,New York City,3
+34,San Francisco,2
+35,New York City,1
+35,Chicago,4
+35,San Jose,3
+35,Washington D.C.,5
+35,Tokyo,2
+36,Washington D.C.,5
+36,Orlando,4
+36,New York City,1
+36,Honolulu,3
+36,Atlanta,2
+37,Cancun,4
+37,Washington D.C.,3
+37,Las Vegas,2
+37,Lima,1
+37,London,5
+38,Amsterdam,1
+38,Boston,4
+38,Melbourne,3
+38,Paris,5
+38,New York City,2
+39,New York City,3
+39,Chicago,2
+39,Washington D.C.,5
+39,Boston,1
+39,Orlando,4
+40,Seoul,1
+40,Chiang Mai,2
+41,Sao Paulo,1
+41,Rome,3
+41,San Francisco,4
+41,Paris,5
+41,Boston,2
+42,San Francisco,1
+42,New York City,3
+42,Rome,2
+43,New York City,1
+44,Honolulu,5
+44,Beijing,4
+44,Washington D.C.,1
+44,Hangzhou,2
+44,Boston,3
+45,Orlando,1
+46,Kyoto,3
+46,Los Angeles,4
+46,Tokyo,1
+46,Washington D.C.,5
+46,Boston,2
+47,Los Angeles,1
+47,San Francisco,2
+47,Houston,4
+47,Las Vegas,3
+48,New York City,4
+48,Honolulu,2
+48,Boston,1
+48,London,3
+49,Macau,3
+49,Vancouver,1
+49,Honolulu,5
+49,Hong Kong,2
+49,Beijing,4
+50,Los Angeles,1
+50,Kyoto,2
+50,Paris,5
+50,Vienna,3
+50,Tel Aviv,4
+51,Jerusalem,3
+51,Cancun,2
+51,Istanbul,1
+51,Barcelona,4
+51,Amman,5
+52,Madrid,2
+52,Sydney,3
+52,Miami,5
+52,Philadelphia,1
+52,New York City,4
+53,New York City,4
+53,Beijing,1
+53,Los Angeles,3
+53,San Francisco,2
+53,London,5
+54,Osaka,2
+54,Quito,4
+54,Jeju,5
+54,Seoul,1
+54,Kyoto,3
+55,Shanghai,4
+55,London,5
+55,Florence,2
+55,Rome,1
+55,Beijing,3
+56,New York City,3
+56,San Jose,1
+56,Delhi,5
+56,San Francisco,4
+56,Jaipur,2
+57,New York City,1
+57,Washington D.C.,2
+57,Los Angeles,3
+58,Atlanta,1
+58,Dallas,2
+58,Orlando,3
+59,Washington D.C.,1
+59,New York City,2
+60,Tokyo,5
+60,Krabi,1
+60,Kyoto,3
+60,Las Vegas,4
+60,Phuket,2
+61,Washington D.C.,3
+61,Orlando,4
+61,San Francisco,1
+61,Atlanta,5
+61,San Jose,2
+62,Bangkok,5
+62,Phuket,2
+62,Las Vegas,1
+62,Honolulu,3
+62,San Francisco,4
+63,Miami,4
+63,San Francisco,3
+63,Chicago,1
+63,Orlando,2
+64,San Francisco,1
+64,Houston,3
+64,Dallas,2
+65,Lima,1
+65,San Jose,4
+65,Los Angeles,3
+65,Atlanta,2
+66,Hong Kong,1
+66,Chicago,2
+66,New York City,5
+66,Singapore,3
+66,Washington D.C.,4
+67,Cancun,3
+67,Vienna,2
+67,Prague,4
+67,Las Vegas,5
+67,Budapest,1
+68,Orlando,1
+68,London,4
+68,Los Angeles,5
+68,San Francisco,3
+68,Honolulu,2
+69,Shanghai,1
+69,Montreal,4
+69,Taipei,5
+69,Singapore,3
+69,Bangkok,2
+70,Washington D.C.,2
+70,New York City,4
+70,San Francisco,3
+70,Las Vegas,5
+70,Los Angeles,1
+71,Miami,1
+71,Las Vegas,3
+71,Los Angeles,2
+72,Barcelona,1
+72,Cancun,5
+72,Prague,2
+72,Madrid,3
+72,Amsterdam,4
+73,London,3
+73,Washington D.C.,1
+73,San Francisco,2
+74,Rome,3
+74,Madrid,1
+74,Tel Aviv,2
+74,Amsterdam,4
+74,Marrakesh,5
+75,Berlin,1
+75,Boston,2
+75,Frankfurt,3
+76,London,5
+76,Edinburgh,4
+76,Paris,3
+76,Amsterdam,1
+76,Vienna,2
+77,Florence,3
+77,Paris,1
+77,New York City,4
+77,Rome,2
+77,Prague,5
+78,Shanghai,5
+78,San Francisco,1
+78,Vancouver,3
+78,Paris,2
+78,Honolulu,4
+79,Washington D.C.,2
+79,Barcelona,3
+79,Madrid,1
+80,Chicago,2
+80,Vancouver,4
+80,Toronto,5
+80,Montreal,3
+80,Amsterdam,1
+81,Rome,1
+81,Barcelona,2
+81,Florence,5
+81,Prague,3
+81,Sydney,4
+82,Orlando,1
+82,San Francisco,2
+83,Krabi,4
+83,Honolulu,2
+83,Hong Kong,1
+83,San Francisco,3
+83,Boston,5
+84,Brussels,2
+84,Barcelona,1
+84,Boston,3
+84,Sydney,5
+84,Edinburgh,4
+85,Washington D.C.,1
+85,New York City,2
+85,Boston,3
+86,Vancouver,4
+86,Dallas,5
+86,Honolulu,1
+86,Lima,3
+86,Shanghai,2
+87,Phuket,1
+87,Honolulu,2
+87,Amsterdam,3
+87,Sydney,4
+87,Athens,5
+88,Honolulu,1
+88,Shanghai,2
+88,Vancouver,4
+88,Lima,3
+88,Dallas,5
+89,Sydney,1
+89,Melbourne,3
+89,Jaipur,2
+89,Singapore,5
+89,Agra,4
+90,Atlanta,3
+90,Jaipur,1
+90,Barcelona,4
+90,Sydney,2
+90,Geneva,5
+91,Boston,1
+91,Mumbai,2
+91,Bangalore,3
+92,San Francisco,4
+92,Sao Paulo,1
+92,Rome,3
+92,Paris,5
+92,Boston,2
+93,Vancouver,1
+93,Honolulu,2
+93,Las Vegas,3
+93,San Francisco,4
+94,San Francisco,3
+94,Honolulu,2
+94,Paris,1
+95,Rio de Janeiro,2
+95,Denpasar,4
+95,Phuket,1
+95,Chiang Mai,5
+95,Sydney,3
+96,Honolulu,2
+96,Phuket,3
+96,Amsterdam,4
+96,Barcelona,1
+97,Honolulu,2
+97,Amsterdam,1
+97,Phuket,3
+98,Dublin,1
+98,Zurich,5
+98,Hong Kong,4
+98,Boston,2
+98,Honolulu,3
+99,Edinburgh,5
+99,Paris,2
+99,Athens,3
+99,Amsterdam,4
+99,Rome,1
+100,Rome,3
+100,Shanghai,1
+100,Moscow,2
+100,Geneva,5
+100,Sydney,4
+101,Montreal,3
+101,Berlin,1
+101,Zurich,5
+101,Munich,4
+101,Edinburgh,2
+102,Las Vegas,3
+102,Amsterdam,5
+102,Venice,1
+102,London,4
+102,Dublin,2
+103,Brussels,3
+103,Kyoto,4
+103,Da Nang,5
+103,Phuket,1
+103,Cebu City,2
+104,Lisbon,2
+104,Barcelona,4
+104,Paris,1
+104,London,3
+104,Copenhagen,5
+105,Amsterdam,4
+105,Dammam,1
+105,Vienna,3
+105,London,2
+105,Athens,5
+106,New York City,3
+106,London,2
+106,Shanghai,5
+106,Paris,4
+106,Istanbul,1
+107,Barcelona,5
+107,Florence,4
+107,San Francisco,2
+107,Amsterdam,1
+107,Venice,3
+108,Taipei,1
+108,Xiamen,2
+108,Macau,5
+108,Guilin,4
+108,San Francisco,3
+109,Honolulu,4
+109,Budapest,5
+109,San Francisco,3
+109,Washington D.C.,2
+109,Munich,1
+110,Edinburgh,2
+110,Munich,5
+110,Rome,3
+110,London,1
+110,Melbourne,4
+111,Boston,5
+111,Tokyo,4
+111,Honolulu,3
+111,Rome,1
+111,New York City,2
+112,Edinburgh,4
+112,Mexico City,2
+112,Dublin,3
+112,Paris,5
+112,New York City,1
+113,Florence,1
+113,Copenhagen,4
+113,Washington D.C.,3
+113,New York City,5
+113,Paris,2
+114,Honolulu,1
+114,Las Vegas,5
+114,Boston,4
+114,Auckland,3
+114,Sydney,2
+115,Amsterdam,4
+115,Prague,3
+115,Barcelona,2
+115,Rio de Janeiro,1
+116,Tokyo,3
+116,Chiang Mai,5
+116,Florence,1
+116,Amsterdam,2
+116,Istanbul,4
+117,Florence,2
+117,Delhi,1
+117,San Francisco,3
+118,Berlin,1
+118,Athens,5
+118,Dublin,4
+118,Prague,3
+118,Seoul,2
+119,Venice,3
+119,Auckland,5
+119,Porto,4
+119,Amsterdam,1
+119,Dublin,2
+120,New York City,1
+120,Washington D.C.,3
+120,Honolulu,2
+120,Boston,4
+120,Dublin,5
+121,Dublin,2
+121,Boston,3
+121,Hamburg,5
+121,Florence,4
+121,Edinburgh,1
+122,Sydney,1
+122,Madrid,3
+122,Las Vegas,5
+122,Vancouver,4
+122,Boston,2
+123,Vancouver,5
+123,Amsterdam,1
+123,Atlanta,4
+123,Boston,2
+123,Dallas,3
+124,Dublin,1
+124,Berlin,4
+124,Denpasar,2
+124,Washington D.C.,5
+124,Copenhagen,3
+125,Cancun,4
+125,New York City,5
+125,Madrid,3
+125,Amsterdam,1
+125,Honolulu,2
+126,Cancun,4
+126,Honolulu,2
+126,New York City,5
+126,Amsterdam,1
+126,Madrid,3
+127,Buenos Aires,4
+127,Rome,5
+127,Auckland,3
+127,Copenhagen,1
+127,Paris,2
+128,New York City,2
+128,Boston,4
+128,Philadelphia,1
+128,Paris,5
+128,Chicago,3
+129,Amsterdam,1
+129,Venice,2
+129,San Francisco,4
+129,Boston,3
+129,Vienna,5
+130,Honolulu,2
+130,Frankfurt,1
+130,Chicago,5
+130,Vancouver,4
+130,Boston,3
+131,New York City,3
+131,London,1
+131,Orlando,4
+131,Paris,2
+131,Philadelphia,5
+132,Rome,5
+132,Amsterdam,1
+132,Florence,2
+132,Paris,3
+132,Philadelphia,4
+133,Amsterdam,3
+133,New York City,5
+133,Copenhagen,2
+133,Paris,1
+133,Beijing,4
+134,Stockholm,2
+134,New York City,3
+134,Florence,1
+134,Rome,4
+135,Cancun,3
+135,Madrid,1
+135,Honolulu,4
+135,Rome,2
+135,Atlanta,5
+136,Honolulu,5
+136,Lisbon,4
+136,Porto,1
+136,Edinburgh,2
+136,Madrid,3
+137,New York City,5
+137,London,3
+137,Cape Town,4
+137,Toronto,1
+137,Paris,2
+138,Cairo,3
+138,Seoul,1
+138,Dubai,2
+139,Denpasar,1
+139,Dammam,2
+139,Toronto,3
+139,Bangalore,5
+139,Mecca,4
+140,San Francisco,2
+140,Mexico City,1
+141,Prague,3
+141,Nice,5
+141,Barcelona,4
+141,Florence,1
+141,Berlin,2
+142,Sydney,2
+142,Florence,1
+142,Melbourne,4
+142,Jaipur,5
+142,Vienna,3
+143,Istanbul,1
+143,Cancun,2
+143,Vancouver,4
+143,Tel Aviv,3
+144,Orlando,5
+144,Honolulu,1
+144,San Francisco,4
+144,Boston,2
+144,Washington D.C.,3
+145,Washington D.C.,5
+145,Prague,3
+145,London,2
+145,Tokyo,4
+145,Kyoto,1
+146,New York City,2
+146,Pune,4
+146,Mumbai,3
+146,San Francisco,5
+146,Boston,1
+147,New York City,1
+147,Dubai,3
+147,Toronto,2
+148,Sydney,3
+148,Melbourne,1
+148,Vancouver,2
+149,San Francisco,5
+149,New York City,2
+149,Cairo,3
+149,Honolulu,4
+149,Atlanta,1
+150,Los Angeles,2
+150,Istanbul,3
+150,Berlin,1
+151,Miami,2
+151,Florence,1
+151,Las Vegas,3
+152,Paris,3
+152,Istanbul,2
+152,Amsterdam,1
+152,Barcelona,4
+152,San Francisco,5
