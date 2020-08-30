@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.0.1">
-    <title>Fixed top navbar example · Bootstrap</title>
+    <title>Trip generator - Maddie </title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/navbar-fixed/">
 
@@ -34,7 +34,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">Fixed navbar</a>
+    <a class="navbar-brand" href="#">Maddie</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -61,11 +61,19 @@
       <div class="jumbotron">
         <h1>Where should you travel?</h1>
         <p class="lead">Think back to better days, when COVID-19 wasn't a thing. Where would you like to travel? Click the button to find out!</p>
-        <a class="btn btn-lg btn-primary" href="../components/navbar/" role="button">Lets go!</a>
+        <button onClick="myFunction()"type="button" class="btn btn-primary btn-lg">Lets go!</button>
+        <p id="demo"></p>
+
+        <script>function myFunction() {document.getElementById("demo").innerHTML = "You should go to Thailand to see Maddie :)";}</script>
+
       </div>
+
+
     </main>
   </body>
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  </head>
       <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
       <script src="js/bootstrap.js"></script>
 
