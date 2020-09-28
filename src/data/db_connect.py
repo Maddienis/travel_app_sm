@@ -48,5 +48,17 @@ def check_db(table_name, city):
  
     return result
 
-#conn.close()
+
+def get_df(table_name):
+    try:
+        conn = sqlite3.connect('/Users/tristannisbet/Documents/travel_app/places.db')
+
+    except Exception as e:
+        print('Error durring connection: ', str(e))
+    
+    sql = """select * from {}""".format(table_name)
+    df = pd.read_sql_query(sql, conn)
+
+    return df
+
 

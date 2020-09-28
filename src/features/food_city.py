@@ -1,12 +1,8 @@
 import pandas as pd
 import numpy as np
-#import sqlite3
 import seaborn as sns
-from matplotlib import pyplot as plt
-from sklearn import preprocessing as pp
-from sklearn.metrics.pairwise import cosine_similarity
 import src.data.db_connect as db
-
+import utils_feature as utils
 
 #main call to create df for all food entries and city
 def cityFoodMain():
@@ -16,7 +12,7 @@ def cityFoodMain():
     final_food_city = selectColumns(food_city)
     
     
-    return final_food_city
+    return final_food_city, food_city
 
 
 #1 hard coded with what tables to read from database
@@ -75,25 +71,11 @@ def addNanRowCity(food_df):
     return food_new
 
 
-
-# You might need to return both food and food_new. Food has city/country names
-
-#6 Might move this to a util folder?
-def buildLabelEncoder():
-    
-    cities = get_df('cities')
-    new_row = {'id': 200, 'city': 'Zx', 'country': 'None'}
-    cities = cities.append(new_row, ignore_index=True)
-    
-    le = pp.LabelEncoder()
-    le.fit(cities.city)
-    
-    return le
   
  # 5    
 def labelEncodeCity(food_df):
     
-    le = buildLabelEncoder()
+    le = utils.buildLabelEncoder()
     food_df['label_id'] = le.transform(food_df.city)
     
     return food_df
@@ -107,5 +89,9 @@ def selectColumns(food_df):
     food_city.set_index('label_id', inplace=True)
     
     return food_city
+
+
+food_city_test = cityFoodMain()
+print(food_city_test)
     
 

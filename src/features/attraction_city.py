@@ -1,6 +1,8 @@
 import pandas as pd
 import numpy as np
 import ast
+import utils_feature as utils
+import src.data.db_connect as db
 
 place_of_worship = ['place_of_worship', 'hindu_temple', 'church', 'mosque', 'synagogue']
 shopping = ['store', 'shopping_mall', 'clothing_store', 'electronics_store', 'grocery_or_supermarket', 'department_store']
@@ -13,9 +15,9 @@ attractions_to_keep = ['amusement_park', 'museum', 'park', 'art_gallery', 'aquar
 # Returns: Each city with a count for the specified attractions
 
 # Hard coded attractions table
-def cityAttractionMain(attraction_df):
-	attractions = get_df('attractions')
-    attractions_split = split_types(attraction_df)
+def cityAttractionMain():
+    attractions_df = db.get_df('attractions')
+    attractions_split = split_types(attractions_df)
     dummy = dummies(attractions_split)
     by_city, all_attractions = attraction_count(dummy, attractions_split)
     city_group = combineAttractionTypes(by_city)
@@ -59,7 +61,7 @@ def combineAttractionTypes(city_group):
 
 
 def labelEncodeAttraction(city_attraction):
-    le = buildLabelEncoder()
+    le = utils.buildLabelEncoder()
     city_attraction.reset_index(inplace=True)
     city_attraction['label_id'] = le.transform(city_attraction.city)
     
@@ -68,9 +70,9 @@ def labelEncodeAttraction(city_attraction):
 
 def cleanCityAttraction(city_attraction):
     city_attraction.sort_values('label_id', inplace=True)
-    #city_attraction.reset_index(inplace=True)
     city_attraction.set_index('label_id', inplace=True)
     city_attraction.drop(columns=['id'], inplace=True)
     city_attraction_clean = city_attraction.drop(columns=['city', 'country'])
     
     return city_attraction_clean, city_attraction
+    
