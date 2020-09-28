@@ -1,6 +1,6 @@
 import pandas as pd
 import api_functions 
-import utils
+import util
 import db_connect as db
 
 def city_query_selection(city_df, query_dict):
@@ -9,7 +9,7 @@ def city_query_selection(city_df, query_dict):
             country = city_df.loc[city_df['city'] == city, 'country'].item()
             id = city_df.loc[city_df['city'] == city, 'id'].item()
             print('inside c q select', city, country, query_dict[query])
-            table_name = utils.find_table_name(query_dict, query_dict[query])
+            table_name = util.find_table_name(query_dict, query_dict[query])
             result = db.check_db(table_name, city)
             if result:
                 print('inside if ')
