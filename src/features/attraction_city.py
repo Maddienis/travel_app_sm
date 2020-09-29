@@ -4,11 +4,11 @@ import ast
 import utils_feature as utils
 import src.data.db_connect as db
 
-place_of_worship = ['place_of_worship', 'hindu_temple', 'church', 'mosque', 'synagogue']
-shopping = ['store', 'shopping_mall', 'clothing_store', 'electronics_store', 'grocery_or_supermarket', 'department_store']
+PLACE_OF_WORSHIP = ['place_of_worship', 'hindu_temple', 'church', 'mosque', 'synagogue']
+SHOPPING = ['store', 'shopping_mall', 'clothing_store', 'electronics_store', 'grocery_or_supermarket', 'department_store']
 
-attractions_to_keep = ['amusement_park', 'museum', 'park', 'art_gallery', 'aquarium',
-                      'zoo', 'library', 'movie_theater', 'natural_feature'] + place_of_worship + shopping
+ATTRACTIONS_TO_KEEP = ['amusement_park', 'museum', 'park', 'art_gallery', 'aquarium',
+                      'zoo', 'library', 'movie_theater', 'natural_feature'] + PLACE_OF_WORSHIP + SHOPPING
 
 
 # Pulls all attraction data from database. Will groupby each attraction type that I want to keep and count.
@@ -17,16 +17,16 @@ attractions_to_keep = ['amusement_park', 'museum', 'park', 'art_gallery', 'aquar
 # Hard coded attractions table
 def cityAttractionMain():
     attractions_df = db.get_df('attractions')
-    attractions_split = split_types(attractions_df)
+    attractions_split = splitTypes(attractions_df)
     dummy = dummies(attractions_split)
-    by_city, all_attractions = attraction_count(dummy, attractions_split)
+    by_city, all_attractions = attractionCount(dummy, attractions_split)
     city_group = combineAttractionTypes(by_city)
     city_attraction = labelEncodeAttraction(city_group)
     clean_city_attraction, city_attraction = cleanCityAttraction(city_attraction)
     
     return clean_city_attraction, city_attraction
 
-def split_types(df):
+def splitTypes(df):
     df['split_types'] = [ast.literal_eval(x) for x in df.types]
     df['split_types_str'] = [','.join(x) for x in df.split_types]
     
@@ -38,10 +38,10 @@ def dummies(df):
     return dummies
 
 
-def attraction_count(dummies_df, all_attractions_df):
+def attractionCount(dummies_df, all_attractions_df):
 
     all_attractions_df = pd.concat([all_attractions_df, dummies_df], axis=1)
-    type_col_names = attractions_to_keep
+    type_col_names = ATTRACTIONS_TO_KEEP
     type_col_names.extend(['country', 'city', 'id'])
     attraction_count = all_attractions_df[type_col_names].groupby(['country', 'city', 'id']).sum()
     

@@ -8,9 +8,9 @@ import utils_feature as utils
 def cityFoodMain():
     all_price = createFoodDf()
     all_price_ = cleaningNullsCity(all_price)
-    food_city = addNanRowCity(all_price_)
+    food_city_level = toCityLevel(all_price_)
+    food_city = addNanRowCity(food_city_level)
     final_food_city = selectColumns(food_city)
-    
     
     return final_food_city, food_city
 
@@ -30,7 +30,8 @@ def createFoodDf():
     return(all_price)
 
 
-#2 called
+# This will fill price level null values that is the mean of the total restaurants for that city
+# If that still does not fill it, it will fill with 2.
 def cleaningNullsCity(restaurants_all):
     
     restaurants_all['id'] = pd.to_numeric(restaurants_all.id)
@@ -39,21 +40,20 @@ def cleaningNullsCity(restaurants_all):
     #do I need this?
     restaurants_all['price_level'] = restaurants_all['price_level'].astype(int)
     
-    city_food = toCityLevel(restaurants_all)
-    city_food.drop(columns = ['avg_price'], inplace=True)
-    city_food.fillna(0, inplace=True)
     
-    return city_food
+    return restaurants_all
 
 
-#3
+# This will take the raw data for all restaurants and count the number for each city and price level.
+ 
 def toCityLevel(df):
 
     city_df = df.groupby(['country', 'city', 'id', 'price_level'])['name'].count().to_frame()
     price_level = city_df.pivot_table(index=['country', 'city', 'id'], columns='price_level', values='name', aggfunc='first')
     price_level['avg_price'] = df.groupby(['country', 'city', 'id'])['price_level'].mean()
+    price_level.drop(columns = ['avg_price'], inplace=True)
+    price_level.fillna(0, inplace=True)
     
-
     
     return price_level
 
@@ -93,5 +93,4 @@ def selectColumns(food_df):
 
 food_city_test = cityFoodMain()
 print(food_city_test)
-    
 

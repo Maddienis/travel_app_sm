@@ -12,8 +12,12 @@ def createSimMatrixMain(table_name, cosine_sim_food, cosine_sim_attraction, food
     top_city_melt = addTopCity(table_name)
     top_city_no_na = dropNullRankCity(top_city_melt)
     
-    sim_df = createUserCitySimMatrix(cosine_sim_food, cosine_sim_attraction, food_df_city_name)
-    
+    sim_df = createUserCitySimMatrix(cosine_sim_food, food_df_city_name)
+    matrix_full = addAttractionSimMatrix(sim_df, cosine_sim_attraction)
+    final_matrix = addSumColumn(matrix_full)
+    clean = cleanMatrix(final_matrix)
+
+
     sim_matrix_ready = mergeRanktoMatrix(sim_df, top_city_no_na)
     
     
@@ -25,7 +29,7 @@ def createSimMatrixMain(table_name, cosine_sim_food, cosine_sim_attraction, food
 # Could maybe pull out first couple lines and create own function...
 
 
-def createUserCitySimMatrix(cosine_sim_food, cosine_sim_attraction, food_df_city_name):
+def createUserCitySimMatrix(cosine_sim_food, food_df_city_name):
     cosine_food = cosine_sim_food.reset_index()
     cos_melt = cosine_food.melt(id_vars=['index'], value_name="food_sim", var_name = "city_id")
     cos_melt.rename(columns={'index': 'user'}, inplace=True)
@@ -35,9 +39,8 @@ def createUserCitySimMatrix(cosine_sim_food, cosine_sim_attraction, food_df_city
     
     cos_melt['city'] = cos_melt['city_id'].map(city_dict)
     
-    matrix_full = addAttractionSimMatrix(cos_melt, cosine_sim_attraction)
 
-    return matrix_full
+    return cos_melt
 
 
 # melts attraction cosine matrix and then merges with the melted city matrix
@@ -48,18 +51,16 @@ def addAttractionSimMatrix(user_city_matrix, cosine_sim_attraction):
     
     sim_matrix = pd.merge(right=user_city_matrix, left=cos_melt, right_on=['user', 'city_id'], left_on=['index', 'city_id'])
     
-    final_matrix = addSumColumn(sim_matrix)
     
-    return final_matrix
+    return sim_matrix
 
 
 # Sums up food sime and attration sim and create a new column
 def addSumColumn(sim_score_matrix):
         
     sim_score_matrix['sum'] = sim_score_matrix['food_sim'] + sim_score_matrix['attraction_sim']
-    clean = cleanMatrix(sim_score_matrix)
     
-    return clean
+    return sim_score_matrix
 
 
 def cleanMatrix(matrix):
@@ -128,6 +129,8 @@ def mergeRanktoMatrix(sim_df, rank_df):
 
     return sim_matrix
 
+
+# All of this below is a separate main call
 
 def userCityCreate(survey_df_clean, city_df_all):
     

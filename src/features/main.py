@@ -20,7 +20,7 @@ def startToEnd():
     
     full_sim_matrix = build_sim.createSimMatrixMain('survey_response', cosine_sim_food, cosine_sim_attraction, food_city_name)
     
-    survey_clean = survey_user.transformUserInput('survey_response')
+    survey_clean = survey_user.transformSurveyMain('survey_response')
     
     full_city_data = city_combine.mergeAttractionFood(city_attraction_with_country, food_city)
     

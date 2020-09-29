@@ -25,10 +25,16 @@ def createFoodUserDf():
     return food_user
 
 
+def transformSurveyMain(table_name):
+    survey_nat = nationalityToNumeric(table_name)
+    survey_city = encodeTopCity(survey_nat)
+    survey_dummy = userDemographicDummy(survey_city)
+
+    return survey_dummy
 
 # This will transform the survey data into all numeric
 
-def transformUserInput(table_name):
+def nationalityToNumeric(table_name):
     survey = db.get_df(table_name)
     survey.drop(columns=[''], inplace=True)
     nationality_dict = {'Australia': 1, 'Canada': 2, 'China': 3, 'Finland': 4, 'Honduras': 5,
@@ -36,12 +42,8 @@ def transformUserInput(table_name):
 
     survey.nationality = survey.nationality.map(nationality_dict)
     survey = survey.replace({'': 'Zx'})
-    survey = encodeTopCity(survey)
-    survey = survey.apply(pd.to_numeric, errors='ignore')
-
-    finished = userDemographicDummy(survey)
     
-    return finished
+    return survey
 
 
 
@@ -53,6 +55,9 @@ def encodeTopCity(user_response):
     user_response['three'] = le.transform(user_response['favorite_city_three'])
     user_response['four'] = le.transform(user_response['favorite_city_four'])
     user_response['five'] = le.transform(user_response['favorite_city_five'])
+
+    user_response = user_response.apply(pd.to_numeric, errors='ignore')
+
     
     return user_response
 
