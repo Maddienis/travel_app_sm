@@ -91,6 +91,3 @@ def selectColumns(food_df):
     return food_city
 
 
-food_city_test = cityFoodMain()
-print(food_city_test)
-

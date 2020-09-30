@@ -17,9 +17,7 @@ def createSimMatrixMain(table_name, cosine_sim_food, cosine_sim_attraction, food
     final_matrix = addSumColumn(matrix_full)
     clean = cleanMatrix(final_matrix)
 
-
-    sim_matrix_ready = mergeRanktoMatrix(sim_df, top_city_no_na)
-    
+    sim_matrix_ready = mergeRanktoMatrix(clean, top_city_no_na)
     
     return sim_matrix_ready
 
@@ -163,5 +161,8 @@ def finalMerge(raw_df, sim_score_df):
     full_matrix.sort_index(level=0, inplace=True)
 
     return full_matrix
+
+
+
 
 

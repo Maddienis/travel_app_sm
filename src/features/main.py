@@ -30,6 +30,5 @@ def startToEnd():
     
     return finished	
 
-
 work = startToEnd()
 print(work)
