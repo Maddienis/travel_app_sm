@@ -72,7 +72,7 @@
   </div>
 <!--Maybe this needs to be changed to <form>-->
 <!--<main role="main" class="container"> -->
-<form action="" method="get">
+<form class="form" action="./" method="get">
 
   <div class="form-group"> 
     <div class="input-group mb-3">
@@ -104,37 +104,40 @@
     </select>
     </div>
   </div>
+  <div class="form-group"> 
+    <div class="input-group mb-3">
+        <label class="input-group-text" for="age">What is your age range?</label>
 
-  <div class="input-group mb-3">
-      <label class="input-group-text" for="age">What is your age range?</label>
-
-    <select class="custom-select" id="age" name="age">
-      <option selected>Choose...</option>
-      <option value="15-25">15-25</option>
-      <option value="25-40">25-40</option>
-      <option value="41-55">41-55</option>
-      <option value="55+">55+</option>
-      <option value="Prefer not to say">Prefer not to say</option>
-    </select>
-    <div class="input-group-append">
+      <select class="custom-select" id="age" name="age">
+        <option selected>Choose...</option>
+        <option value="15-25">15-25</option>
+        <option value="25-40">25-40</option>
+        <option value="41-55">41-55</option>
+        <option value="55+">55+</option>
+        <option value="Prefer not to say">Prefer not to say</option>
+      </select>
+      <div class="input-group-append">
+      </div>
     </div>
   </div>
 
+  <div class="form-group"> 
     <div class="input-group mb-3">
       <label class="input-group-text" for="gender">What is your gender?</label>
 
-    <select class="custom-select" id="gender" name="gender">
-      <option selected>Choose...</option>
-      <option value="Female">Female</option>
-      <option value="Male">Male</option>
-      <option value="Prefer not to say">Prefer not to say</option>
-    </select>
-    <div class="input-group-append">
+      <select class="custom-select" id="gender" name="gender">
+        <option selected>Choose...</option>
+        <option value="Female">Female</option>
+        <option value="Male">Male</option>
+        <option value="Prefer not to say">Prefer not to say</option>
+      </select>
+      <div class="input-group-append">
+      </div>
     </div>
-    </div>
+  </div>
 
 
-<div class="row d-flex justify-content-center mt-100">
+  <div class="row d-flex justify-content-center mt-100">
     <div class="col-md-6"> <select id="choices-multiple-remove-button" placeholder="Select upto 5 tags" multiple>
             <option value="HTML">HTML</option>
             <option value="Jquery">Jquery</option>
@@ -150,20 +153,7 @@
             <option value="NOSQL">NOSQL</option>
             <option value="NodeJS">NodeJS</option>
         </select> </div>
-</div>
-
-  <div class="input-group mb-3">
-    <div class="input-group-prepend">
-      <button class="btn btn-outline-secondary" type="button">Button</button>
-    </div>
-    <select class="custom-select" id="inputGroupSelect03" aria-label="Example select with button addon">
-      <option selected>Choose...</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
-    </select>
   </div>
-
 
 
   <div class="input-group mb-3">
@@ -172,47 +162,111 @@
     </div>
   </div>
 
- 
+  <div class="container">
+    <div class="row label">
+        <div class="col-md-1"></div>
+        <div class="col-md-1">
+          <label> Always</label>
+        </div>
+        <div class="col-md-1">
+          <label> Often</label>
+        </div>
+        <div class="col-md-1">
+          <label> Sometimes</label>
+        </div>
+        <div class="col-md-1">
+          <label> Rarely</label>
+        </div>
+        <div class="col-md-1">
+          <label> Never</label>
+        </div>
+    </div>
+    <div class="row price1">
+        <div class="col-md-1">
+          <label>Price level 1: (Fast Food/Cheap Eats)</label>
+        </div>
+        <div class="col-md-1">
+          <input type="radio" name="always1">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="often1">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="sometimes1">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="rarely1">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="never1">
+        </div>
+    </div>
 
-  <fieldset id="price1">
-    <label class="form-group" for=price1> Price Level 1: (Fast/Cheap Eats) </label>
-    <input type="radio" value="always" name="price1">Always 
-    <input type="radio" value="often" name="price1">Often
-    <input type="radio" value="sometimes" name="price1">Sometimes
-    <input type="radio" value="rarely" name="price1">Rarely
-    <input type="radio" value="never" name="price1">Never
-  </fieldset>
+    <div class="row price2">
+        <div class="col-md-1">
+          <label>Price level 2: (Casual Dining)</label>
+        </div>
+        <div class="col-md-1">
+          <input type="radio" name="always2">
+        </div>
+        <div class="col-md-1">
+          <input type="radio" name="often2">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="sometimes2">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="rarely2">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="never2">
+        </div>
+    </div>
 
-  <fieldset id="price2">
-    <label class="form-group" for=price2> Price Level 2: (Casual Dining) </label>
-    <input type="radio" value="always" name="price2">Always
-    <input type="radio" value="often" name="price2">Often
-    <input type="radio" value="sometimes" name="price2">Sometimes
-    <input type="radio" value="rarely" name="price2">Rarely
-    <input type="radio" value="never" name="price2">Never
-  </fieldset>
+    <div class="row price3">
+        <div class="col-md-1">
+          <label>Price level 3: (Casual Dining)</label>
+        </div>
+        <div class="col-md-1">
+          <input type="radio" name="always3">
+        </div>
+        <div class="col-md-1">
+          <input type="radio" name="often3">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="sometimes3">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="rarely3">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="never3">
+        </div>
+    </div>
+    <div class="row price4">
+        <div class="col-md-1">
+          <label>Price level 4: (Fine Dining / High End)</label>
+        </div>
+        <div class="col-md-1">
+          <input type="radio" name="always4">
+        </div>
+        <div class="col-md-1">
+          <input type="radio" name="often4">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="sometimes4">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="rarely4">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="never4">
+        </div>
+    </div>
+  </div>
 
 
-  <fieldset id="price3">
-    <label class="form-group" for=price3> Price Level 3: (Upscale Dining) </label>
-    <input type="radio" value="always" name="price3">Always
-    <input type="radio" value="often" name="price3">Often
-    <input type="radio" value="sometimes" name="price3">Sometimes
-    <input type="radio" value="rarely" name="price3">Rarely
-    <input type="radio" value="never" name="price3">Never
-  </fieldset>
-
-  <fieldset id="price4">
-    <label class="form-group" for=price4> Price Level 4: (Fine dining/high End) </label>
-    <input type="radio" value="always" name="price4">Always
-    <input type="radio" value="often" name="price4">Often
-    <input type="radio" value="sometimes" name="price4">Sometimes
-    <input type="radio" value="rarely" name="price4">Rarely
-    <input type="radio" value="never" name="price4">Never
-  </fieldset>
-
-
-
+  
   <div class="input-group mb-3">
     <div class="row">
       <label class="input-group-text" for="attraction">From the following types of tourist attractions, which ones are you likely to go do while traveling? </label>
@@ -306,54 +360,11 @@
     <input type="radio" value="3" name="temple">3
     <input type="radio" value="4" name="temple">4 
   </fieldset>
+      
+      
 
  
-
-
-  <div class="input-group mb-3">
-
-
-    <select class="mdb-select colorful-select dropdown-primary md-form" multiple searchable="Search here..">
-      <option value="" disabled selected>Choose your country</option>
-      <option value="1">USA</option>
-      <option value="2">Germany</option>
-      <option value="3">France</option>
-      <option value="4">Poland</option>
-      <option value="5">Japan</option>
-    </select>
-    <label class="mdb-main-label">Label example</label>
-    <button class="btn-save btn btn-primary btn-sm">Save</button>
-  <div class="input-group-append">
-  </div>
-
-  <div class="input-group">
-    <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-      <option selected>Choose...</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
-    </select>
-    <div class="input-group-append">
-      <button class="btn btn-outline-secondary" type="button">Button</button>
-    </div>
-  </div>
-</form>
 <!--</main>-->
-
-
-    
-
-
-  
-  <div class="starter-template">
-    <h1>Bootstrap starter template</h1>
-    <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-  </div>
-
-
-
-
-
 
 
 
