@@ -8,6 +8,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="static/css/bootstrap.min.css">
 
+
+
  <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -68,8 +70,9 @@
     <p>More text can go here, I would like to put a picture behind the text.</p>
 
   </div>
-
-<main role="main" class="container">
+<!--Maybe this needs to be changed to <form>-->
+<!--<main role="main" class="container"> -->
+<form action="" method="get">
 
   <div class="form-group"> 
     <div class="input-group mb-3">
@@ -130,6 +133,25 @@
     </div>
     </div>
 
+
+<div class="row d-flex justify-content-center mt-100">
+    <div class="col-md-6"> <select id="choices-multiple-remove-button" placeholder="Select upto 5 tags" multiple>
+            <option value="HTML">HTML</option>
+            <option value="Jquery">Jquery</option>
+            <option value="CSS">CSS</option>
+            <option value="Bootstrap 3">Bootstrap 3</option>
+            <option value="Bootstrap 4">Bootstrap 4</option>
+            <option value="Java">Java</option>
+            <option value="Javascript">Javascript</option>
+            <option value="Angular">Angular</option>
+            <option value="Python">Python</option>
+            <option value="Hybris">Hybris</option>
+            <option value="SQL">SQL</option>
+            <option value="NOSQL">NOSQL</option>
+            <option value="NodeJS">NodeJS</option>
+        </select> </div>
+</div>
+
   <div class="input-group mb-3">
     <div class="input-group-prepend">
       <button class="btn btn-outline-secondary" type="button">Button</button>
@@ -143,66 +165,150 @@
   </div>
 
 
-  <div class="form-group">
-    <div class="form-group-row">
-      <label class="form-"></label>
-
-    <div class="custom-control custom-radio custom-control-inline">
-      <input type="radio" id="always" name="always" class="custom-control-input">
-      <label class="custom-control-label" for="always">Always</label>
-    </div>
-    <div class="custom-control custom-radio custom-control-inline">
-      <input type="radio" id="often" name="often" class="custom-control-input">
-      <label class="custom-control-label" for="often">Often</label>
-    </div>
-    <div class="custom-control custom-radio custom-control-inline">
-      <input type="radio" id="often" name="sometimes" class="custom-control-input">
-      <label class="custom-control-label" for="sometimes">Sometimes</label>
-    </div>
-    <div class="custom-control custom-radio custom-control-inline">
-      <input type="radio" id="often" name="rarely" class="custom-control-input">
-      <label class="custom-control-label" for="rarely">Rarely</label>
-    </div>
-    <div class="custom-control custom-radio custom-control-inline">
-      <input type="radio" id="often" name="never" class="custom-control-input">
-      <label class="custom-control-label" for="never">Never</label>
-    </div>
-    </div>
-  </div>
-
-
-  <div class="input-group mb-3">
-   <div class="row">
-    <label class="input-group-text" for="food">What price range of restaurant do you eat at when you travel? </label>
-  </div>
-  </div>
 
   <div class="input-group mb-3">
     <div class="row">
-
-    <div class="custom-control custom-radio custom-control-inline">
-      <label class="custom-control-label-text" for="price1"> Price Level 1: Fast/Cheap Eats</label>
-      <input type="radio" id="always" name="always" class="custom-control-input">
-      <label class="custom-control-label" for="always">Always</label>
-    </div>
-    <div class="custom-control custom-radio custom-control-inline">
-      <input type="radio" id="often" name="often" class="custom-control-input">
-      <label class="custom-control-label" for="often">Often</label>
-    </div>
-    <div class="custom-control custom-radio custom-control-inline">
-      <input type="radio" id="often" name="sometimes" class="custom-control-input">
-      <label class="custom-control-label" for="sometimes">Sometimes</label>
-    </div>
-    <div class="custom-control custom-radio custom-control-inline">
-      <input type="radio" id="often" name="rarely" class="custom-control-input">
-      <label class="custom-control-label" for="rarely">Rarely</label>
-    </div>
-    <div class="custom-control custom-radio custom-control-inline">
-      <input type="radio" id="often" name="never" class="custom-control-input">
-      <label class="custom-control-label" for="never">Never</label>
-    </div>
+      <label class="input-group-text" for="food">What price range of restaurant do you eat at when you travel? </label>
     </div>
   </div>
+
+ 
+
+  <fieldset id="price1">
+    <label class="form-group" for=price1> Price Level 1: (Fast/Cheap Eats) </label>
+    <input type="radio" value="always" name="price1">Always 
+    <input type="radio" value="often" name="price1">Often
+    <input type="radio" value="sometimes" name="price1">Sometimes
+    <input type="radio" value="rarely" name="price1">Rarely
+    <input type="radio" value="never" name="price1">Never
+  </fieldset>
+
+  <fieldset id="price2">
+    <label class="form-group" for=price2> Price Level 2: (Casual Dining) </label>
+    <input type="radio" value="always" name="price2">Always
+    <input type="radio" value="often" name="price2">Often
+    <input type="radio" value="sometimes" name="price2">Sometimes
+    <input type="radio" value="rarely" name="price2">Rarely
+    <input type="radio" value="never" name="price2">Never
+  </fieldset>
+
+
+  <fieldset id="price3">
+    <label class="form-group" for=price3> Price Level 3: (Upscale Dining) </label>
+    <input type="radio" value="always" name="price3">Always
+    <input type="radio" value="often" name="price3">Often
+    <input type="radio" value="sometimes" name="price3">Sometimes
+    <input type="radio" value="rarely" name="price3">Rarely
+    <input type="radio" value="never" name="price3">Never
+  </fieldset>
+
+  <fieldset id="price4">
+    <label class="form-group" for=price4> Price Level 4: (Fine dining/high End) </label>
+    <input type="radio" value="always" name="price4">Always
+    <input type="radio" value="often" name="price4">Often
+    <input type="radio" value="sometimes" name="price4">Sometimes
+    <input type="radio" value="rarely" name="price4">Rarely
+    <input type="radio" value="never" name="price4">Never
+  </fieldset>
+
+
+
+  <div class="input-group mb-3">
+    <div class="row">
+      <label class="input-group-text" for="attraction">From the following types of tourist attractions, which ones are you likely to go do while traveling? </label>
+    </div>
+  </div>
+
+   <fieldset id="artgallery">
+    <label class="form-group" for=artgallery> Art Gallery</label>
+    <input type="radio" value="1" name="artgallery">1 (Would NOT go) 
+    <input type="radio" value="2" name="artgallery">2
+    <input type="radio" value="3" name="artgallery">3
+    <input type="radio" value="4" name="artgallery">4 (Definitely would go)
+  </fieldset>
+
+  <fieldset id="library">
+    <label class="form-group" for=library> Library </label>
+    <input type="radio" value="1" name="library">1 (Would NOT go) 
+    <input type="radio" value="2" name="library">2
+    <input type="radio" value="3" name="library">3
+    <input type="radio" value="4" name="library">4 (Definitely would go)
+  </fieldset>
+
+  <fieldset id="museum">
+    <label class="form-group" for=museum> Museum</label>
+    <input type="radio" value="1" name="museum">1 (Would NOT go) 
+    <input type="radio" value="2" name="museum">2
+    <input type="radio" value="3" name="museum">3
+    <input type="radio" value="4" name="museum">4 (Definitely would go)
+  </fieldset>
+
+  <fieldset id="aquarium">
+    <label class="form-group" for=aquarium> Aquarium</label>
+    <input type="radio" value="1" name="aquarium">1  
+    <input type="radio" value="2" name="aquarium">2
+    <input type="radio" value="3" name="aquarium">3
+    <input type="radio" value="4" name="aquarium">4 
+  </fieldset>
+
+  <fieldset id="amusementpark">
+    <label class="form-group" for=amusementpark> Amusement Park</label>
+    <input type="radio" value="1" name="amusementpark">1 
+    <input type="radio" value="2" name="amusementpark">2
+    <input type="radio" value="3" name="amusementpark">3
+    <input type="radio" value="4" name="amusementpark">4 
+  </fieldset>
+
+  <fieldset id="zoo">
+    <label class="form-group" for=zoo> Zoo</label>
+    <input type="radio" value="1" name="zoo">1
+    <input type="radio" value="2" name="zoo">2
+    <input type="radio" value="3" name="zoo">3
+    <input type="radio" value="4" name="zoo">4 
+  </fieldset>
+
+  <fieldset id="movietheater">
+    <label class="form-group" for=movietheater> Movie Theater</label>
+    <input type="radio" value="1" name="movietheater">1
+    <input type="radio" value="2" name="movietheater">2
+    <input type="radio" value="3" name="movietheater">3
+    <input type="radio" value="4" name="movietheater">4 
+  </fieldset>
+
+  <fieldset id="store">
+    <label class="form-group" for=store> Mall / Souvenir shop</label>
+    <input type="radio" value="1" name="store">1
+    <input type="radio" value="2" name="store">2
+    <input type="radio" value="3" name="store">3
+    <input type="radio" value="4" name="store">4 
+  </fieldset>
+
+  <fieldset id="park">
+    <label class="form-group" for=park> Park</label>
+    <input type="radio" value="1" name="park">1
+    <input type="radio" value="2" name="park">2
+    <input type="radio" value="3" name="park">3
+    <input type="radio" value="4" name="park">4 
+  </fieldset>
+
+  <fieldset id="naturalfeature">
+    <label class="form-group" for=naturalfeature> Natural Feature / Beach</label>
+    <input type="radio" value="1" name="naturalfeature">1
+    <input type="radio" value="2" name="naturalfeature">2
+    <input type="radio" value="3" name="naturalfeature">3
+    <input type="radio" value="4" name="naturalfeature">4 
+  </fieldset>
+
+  <fieldset id="temple">
+    <label class="form-group" for=temple> Place of Worship (Church/Temple)</label>
+    <input type="radio" value="1" name="temple">1
+    <input type="radio" value="2" name="temple">2
+    <input type="radio" value="3" name="temple">3
+    <input type="radio" value="4" name="temple">4 
+  </fieldset>
+
+ 
+
 
   <div class="input-group mb-3">
 
@@ -231,6 +337,10 @@
       <button class="btn btn-outline-secondary" type="button">Button</button>
     </div>
   </div>
+</form>
+<!--</main>-->
+
+
     
 
 
@@ -251,5 +361,6 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="static/js/bootstrap.min.js"></script>
+  
   </body>
 </html>
