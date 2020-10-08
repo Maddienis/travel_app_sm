@@ -40,6 +40,17 @@ fieldset {
 
 }
 
+.border-bottom {
+    border-bottom:1px solid #ccc
+}
+
+.line {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  height: 2px;
+  border-bottom: 1px solid black;
+  width: 100%;
+}
 
 
 
