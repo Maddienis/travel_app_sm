@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect
 
 app = Flask(__name__)
 
@@ -7,6 +7,27 @@ app = Flask(__name__)
 #     return 'Hello, World!'
 
 
-@app.route('/')
+# Can add /home or leave it. 
+@app.route('/', methods=["GET", "POST"])
 def index():
+	if request.method == "POST":
+		#Can delete this
+		req = request.form
+		print(req)
+
+		homecountry = request.form["homeCountry"]
+		age = request.form["age"]
+		gender = request.form["gender"]
+
+		print(homecountry)
+
+		return redirect(request.url)
+
 	return render_template('starter_template_new.html')
+
+
+@app.route('/handle_data', methods=['POST'])
+def handle_data():
+	projectpath = request.form['projectFilepath']
+
+	return projectpath

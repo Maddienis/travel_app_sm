@@ -72,15 +72,15 @@
   </div>
 <!--Maybe this needs to be changed to <form>-->
 <!--<main role="main" class="container"> -->
-<form class="form" action="./" method="get">
+<form class="form" action="/" method="post">
 
   <div class="form-group"> 
     <div class="input-group mb-3">
     <div class="input-group-prepend">
       <label class="input-group-text" for="homeCountry">Which country are you from?</label>
       </div>
-    <select class="custom-select" id="homeCountry" name="homeCountry">
-        <option selected= > Choose...</option>
+    <select class="custom-select" id="homeCountry" name="homeCountry" required>
+        <option selected disabled value=""> Choose...</option>
         <option value="United States">United States</option>
         <option value="United Kingdom">United Kingdom</option>
         <option value="Afghanistan">Afghanistan</option>
@@ -333,6 +333,7 @@
         <option value="Zambia">Zambia</option>
         <option value="Zimbabwe">Zimbabwe</option>
     </select>
+    <div class="invalid-feedback">Please choose an option</div>
     </div>
   </div>
 
@@ -340,8 +341,8 @@
     <div class="input-group mb-3">
         <label class="input-group-text" for="age">What is your age range?</label>
 
-      <select class="custom-select" id="age" name="age">
-        <option selected>Choose...</option>
+      <select class="custom-select" id="age" name="age" required>
+        <option value="">Choose...</option>
         <option value="15-25">15-25</option>
         <option value="25-40">25-40</option>
         <option value="41-55">41-55</option>
@@ -357,8 +358,8 @@
     <div class="input-group mb-3">
       <label class="input-group-text" for="gender">What is your gender?</label>
 
-      <select class="custom-select" id="gender" name="gender">
-        <option selected>Choose...</option>
+      <select class="custom-select" id="gender" name="gender" required>
+        <option value="">Choose...</option>
         <option value="Female">Female</option>
         <option value="Male">Male</option>
         <option value="Prefer not to say">Prefer not to say</option>
@@ -372,7 +373,6 @@
     <div class= "input-group mb-3">
         <label class="input-group-text" for="topcity"> Choose your favorite 3-5 cities you've traveled to</label>
     <select class="chzn-select" multiple="true" name="faculty" style="width:200px;">
-
         <option value="Abu Dhabi">Abu Dhabi, United Arab Emirates</option>
         <option value="Accra">Accra, Ghana</option>
         <option value="Agra">Agra, India</option>
@@ -539,88 +539,88 @@
           <label> Never</label>
         </div>
     </div>
-    <div class="row price1 border-bottom">
+    <div class="row food1 border-bottom">
         <div class="col-md-1">
 
             <label>Price level 1: (Fast Food/Cheap Eats)</label><hr>
 
         </div>
         <div class="col-md-1">
-          <input type="radio" name="price1" value="always1">
+          <input type="radio" name="food1" value="always1" required>
         </div>
         <div class="col-md-1">
-           <input type="radio" name="price1" value="often1">
+           <input type="radio" name="food1" value="often1" required>
         </div>
         <div class="col-md-1">
-           <input type="radio" name="price1" value="sometimes1">
+           <input type="radio" name="food1" value="sometimes1" required>
         </div>
         <div class="col-md-1">
-           <input type="radio" name="price1" value="rarely1">
+           <input type="radio" name="food1" value="rarely1" required>
         </div>
         <div class="col-md-1">
-           <input type="radio" name="price1" value="never1">
+           <input type="radio" name="food1" value="never1" required>
         </div>
     </div>
 
-    <div class="row price2 border-bottom">
+    <div class="row food2 border-bottom">
         <div class="col-md-1">
           <label>Price level 2: (Casual Dining)</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="price2" value="always2">
+          <input type="radio" name="food2" value="always2" required>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="price2" value="often2">
+          <input type="radio" name="food2" value="often2">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="price2" value="sometimes2">
+           <input type="radio" name="food2" value="sometimes2">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="price2" value="rarely2">
+           <input type="radio" name="food2" value="rarely2">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="price2" value="never2">
+           <input type="radio" name="food2" value="never2">
         </div>
     </div>
 
-    <div class="row price3 border-bottom">
+    <div class="row food3 border-bottom">
         <div class="col-md-1">
           <label>Price level 3: (Casual Dining)</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="price3" value="always3">
+          <input type="radio" name="food3" value="always3" required>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="price3" value="often3">
+          <input type="radio" name="food3" value="often3">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="price3" value="sometimes3">
+           <input type="radio" name="food3" value="sometimes3">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="price3" value="rarely3">
+           <input type="radio" name="food3" value="rarely3">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="price3" value="never3">
+           <input type="radio" name="food3" value="never3">
         </div>
     </div>
-    <div class="row price4">
+    <div class="row food4">
         <div class="col-md-1">
           <label>Price level 4: (Fine Dining / High End)</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="price4" value="always4">
+          <input type="radio" name="food4" value="always4" required>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="price4" value="often4">
+          <input type="radio" name="food4" value="often4">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="price4" value="sometimes4">
+           <input type="radio" name="food4" value="sometimes4">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="price4" value="rarely4">
+           <input type="radio" name="food4" value="rarely4">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="price4" value="never4">
+           <input type="radio" name="food4" value="never4">
         </div>
     </div>
   </div>
@@ -655,7 +655,7 @@
           <label>Amusement Park</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="amusementpark" value="amusementpark4">
+          <input type="radio" name="amusementpark" value="amusementpark4" required>
         </div>
         <div class="col-md-1">
           <input type="radio" name="amusementpark" value="amusementpark3">
@@ -672,7 +672,7 @@
           <label>Art Gallery</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="artgallery" value="artgallery4">
+          <input type="radio" name="artgallery" value="artgallery4" required>
         </div>
         <div class="col-md-1">
            <input type="radio" name="artgallery" value="artgallery3">
@@ -690,7 +690,7 @@
           <label>Aquarium</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="aqarium" value="aquarium4">
+          <input type="radio" name="aqarium" value="aquarium4" required>
         </div>
         <div class="col-md-1">
           <input type="radio" name="aqarium" value="aquarium3">
@@ -707,7 +707,7 @@
           <label>Library</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" value="library" value="library4">
+          <input type="radio" value="library" value="library4" required>
         </div>
         <div class="col-md-1">
           <input type="radio" value="library" value="library3">
@@ -724,7 +724,7 @@
           <label>Movie Theater</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="movietheater" value="movietheater4">
+          <input type="radio" name="movietheater" value="movietheater4" required>
         </div>
         <div class="col-md-1">
           <input type="radio" name="movietheater" value="movietheater3">
@@ -741,7 +741,7 @@
           <label>Museum</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="museum" value="museum4">
+          <input type="radio" name="museum" value="museum4" required>
         </div>
         <div class="col-md-1">
           <input type="radio" name="museum" value="museum3">
@@ -758,7 +758,7 @@
           <label>Mall / Souvenir shop</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="store" value="store4">
+          <input type="radio" name="store" value="store4" required>
         </div>
         <div class="col-md-1">
           <input type="radio" name="store" value="store3">
@@ -775,7 +775,7 @@
           <label>Natural Feature / Beach</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="naturalfeature" value="naturalfeature4">
+          <input type="radio" name="naturalfeature" value="naturalfeature4" required>
         </div>
         <div class="col-md-1">
           <input type="radio" name="naturalfeature" value="naturalfeature3">
@@ -792,7 +792,7 @@
           <label>Park</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="park" value="park4">
+          <input type="radio" name="park" value="park4" required>
         </div>
         <div class="col-md-1">
           <input type="radio" name="park" value="park3">
@@ -809,7 +809,7 @@
           <label>Place of Worship (Church/Temple)</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="temple" value="temple4">
+          <input type="radio" name="temple" value="temple4" required>
         </div>
         <div class="col-md-1">
           <input type="radio" name="temple" value="temple3">
@@ -826,7 +826,7 @@
           <label>Zoo</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="zoo" value="zoo4">
+          <input type="radio" name="zoo" value="zoo4" required>
         </div>
         <div class="col-md-1">
           <input type="radio" name="zoo" value="zoo3">
@@ -837,9 +837,15 @@
         <div class="col-md-1">
            <input type="radio" name="zoo" value="zoo1">
         </div>
-    </div>
+      </div>
   </div>
-      
+  
+  <div class="form-group">
+    <input class="btn btn-secondary btn-lg float-right" type="submit" value="lets go!">
+  </div>
+</form>
+
+
 
  
 <!--</main>-->
