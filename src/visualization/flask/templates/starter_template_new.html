@@ -47,14 +47,6 @@
       <li class="nav-item">
         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-        <div class="dropdown-menu" aria-labelledby="dropdown01">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
@@ -63,15 +55,20 @@
   </div>
 </nav>
 
-  <div class="jumbotron">
+  <div class="jumbotron ">
     <h1 class="display-4">City Travel Recommender</h1>
     <p class="lead">Just enter a couple of questions to recieve your next vacation destination.</p>
     <hr class="my-4">
-    <p>More text can go here, I would like to put a picture behind the text.</p>
-
+    
+    <br><br><br><br><br><br><br><br> 
   </div>
 <!--Maybe this needs to be changed to <form>-->
 <!--<main role="main" class="container"> -->
+
+  <div class="heading-intro">
+      <h4 class="instructions">fill out all of the questions listed below </h4>
+
+  </div>
 <form class="form" action="/" method="post">
 
   <div class="form-group"> 
@@ -371,8 +368,11 @@
 
   <div class="form-group">
     <div class= "input-group mb-3">
-        <label class="input-group-text" for="topcity"> Choose your favorite 3-5 cities you've traveled to</label>
-    <select class="chzn-select" multiple="true" name="faculty" style="width:200px;">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="topcity">Select your favorite cities you've</span>
+      </div>
+        <!--<label class="input-group-text" for="topcity"> Choose your favorite 3-5 cities you've traveled to</label>-->
+      <select class="chzn-select" multiple="true" name="topcity" style="width:200px;">
         <option value="Abu Dhabi">Abu Dhabi, United Arab Emirates</option>
         <option value="Accra">Accra, Ghana</option>
         <option value="Agra">Agra, India</option>
@@ -508,9 +508,30 @@
         <option value="Xiamen">Xiamen, China</option>
         <option value="Zhuhai">Zhuhai, China</option>
         <option value="Zurich">Zurich, Switzerland</option>
-      <div class="input-group-append">
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group"> 
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="continent">Which continent do you want to travel to?  </span>
+        </div>
+
+        <!---<label class="input-group-text" for="continent">Which continent do you want to travel to?</label>-->
+
+      <select class="custom-select" id="continent" name="continent" required>
+        <option value="">Choose...</option>
+        <option value="Africa">Africa</option>
+        <option value="Australia">Australia</option>
+        <option value="Asia">Asia</option>
+        <option value="Europe">Europe</option>
+        <option value="North America">North America</option>
+        <option value="South America">South America</option>
+        <option value="anywhere">I'll go anywhere</option>
+      </select>
+      <!--<div class="input-group-append">-->
       </div>
-    </select>
     </div>
   </div>
 
