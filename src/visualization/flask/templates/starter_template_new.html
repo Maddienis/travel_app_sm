@@ -1,0 +1,886 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/chosen.min.css">
+
+
+ <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About Me</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+  <div class="jumbotron ">
+    <h1 class="display-4">City Travel Recommender</h1>
+    <p class="lead">Just enter a couple of questions to recieve your next vacation destination.</p>
+    <hr class="my-4">
+    
+    <br><br><br><br><br><br><br><br> 
+  </div>
+<!--Maybe this needs to be changed to <form>-->
+<!--<main role="main" class="container"> -->
+
+  <div class="heading-intro">
+      <h4 class="instructions">fill out all of the questions listed below </h4>
+
+  </div>
+<form class="form" action="/" method="post">
+
+  <div class="form-group"> 
+    <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <label class="input-group-text" for="homeCountry">Which country are you from?</label>
+      </div>
+    <select class="custom-select" id="homeCountry" name="homeCountry" required>
+        <option selected disabled value=""> Choose...</option>
+        <option value="United States">United States</option>
+        <option value="United Kingdom">United Kingdom</option>
+        <option value="Afghanistan">Afghanistan</option>
+        <option value="Aland Islands">Aland Islands</option>
+        <option value="Albania">Albania</option>
+        <option value="Algeria">Algeria</option>
+        <option value="American Samoa">American Samoa</option>
+        <option value="Andorra">Andorra</option>
+        <option value="Angola">Angola</option>
+        <option value="Anguilla">Anguilla</option>
+        <option value="Antarctica">Antarctica</option>
+        <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+        <option value="Argentina">Argentina</option>
+        <option value="Armenia">Armenia</option>
+        <option value="Aruba">Aruba</option>
+        <option value="Australia">Australia</option>
+        <option value="Austria">Austria</option>
+        <option value="Azerbaijan">Azerbaijan</option>
+        <option value="Bahamas">Bahamas</option>
+        <option value="Bahrain">Bahrain</option>
+        <option value="Bangladesh">Bangladesh</option>
+        <option value="Barbados">Barbados</option>
+        <option value="Belarus">Belarus</option>
+        <option value="Belgium">Belgium</option>
+        <option value="Belize">Belize</option>
+        <option value="Benin">Benin</option>
+        <option value="Bermuda">Bermuda</option>
+        <option value="Bhutan">Bhutan</option>
+        <option value="Bolivia, Plurinational State of">Bolivia, Plurinational State of</option>
+        <option value="Bonaire, Sint Eustatius and Saba">Bonaire, Sint Eustatius and Saba</option>
+        <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+        <option value="Botswana">Botswana</option>
+        <option value="Bouvet Island">Bouvet Island</option>
+        <option value="Brazil">Brazil</option>
+        <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+        <option value="Brunei Darussalam">Brunei Darussalam</option>
+        <option value="Bulgaria">Bulgaria</option>
+        <option value="Burkina Faso">Burkina Faso</option>
+        <option value="Burundi">Burundi</option>
+        <option value="Cambodia">Cambodia</option>
+        <option value="Cameroon">Cameroon</option>
+        <option value="Canada">Canada</option>
+        <option value="Cape Verde">Cape Verde</option>
+        <option value="Cayman Islands">Cayman Islands</option>
+        <option value="Central African Republic">Central African Republic</option>
+        <option value="Chad">Chad</option>
+        <option value="Chile">Chile</option>
+        <option value="China">China</option>
+        <option value="Christmas Island">Christmas Island</option>
+        <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+        <option value="Colombia">Colombia</option>
+        <option value="Comoros">Comoros</option>
+        <option value="Congo">Congo</option>
+        <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>
+        <option value="Cook Islands">Cook Islands</option>
+        <option value="Costa Rica">Costa Rica</option>
+        <option value="Cote D&apos;ivoire">Cote D'ivoire</option>
+        <option value="Croatia">Croatia</option>
+        <option value="Cuba">Cuba</option>
+        <option value="Curacao">Curacao</option>
+        <option value="Cyprus">Cyprus</option>
+        <option value="Czech Republic">Czech Republic</option>
+        <option value="Denmark">Denmark</option>
+        <option value="Djibouti">Djibouti</option>
+        <option value="Dominica">Dominica</option>
+        <option value="Dominican Republic">Dominican Republic</option>
+        <option value="Ecuador">Ecuador</option>
+        <option value="Egypt">Egypt</option>
+        <option value="El Salvador">El Salvador</option>
+        <option value="Equatorial Guinea">Equatorial Guinea</option>
+        <option value="Eritrea">Eritrea</option>
+        <option value="Estonia">Estonia</option>
+        <option value="Ethiopia">Ethiopia</option>
+        <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+        <option value="Faroe Islands">Faroe Islands</option>
+        <option value="Fiji">Fiji</option>
+        <option value="Finland">Finland</option>
+        <option value="France">France</option>
+        <option value="French Guiana">French Guiana</option>
+        <option value="French Polynesia">French Polynesia</option>
+        <option value="French Southern Territories">French Southern Territories</option>
+        <option value="Gabon">Gabon</option>
+        <option value="Gambia">Gambia</option>
+        <option value="Georgia">Georgia</option>
+        <option value="Germany">Germany</option>
+        <option value="Ghana">Ghana</option>
+        <option value="Gibraltar">Gibraltar</option>
+        <option value="Greece">Greece</option>
+        <option value="Greenland">Greenland</option>
+        <option value="Grenada">Grenada</option>
+        <option value="Guadeloupe">Guadeloupe</option>
+        <option value="Guam">Guam</option>
+        <option value="Guatemala">Guatemala</option>
+        <option value="Guernsey">Guernsey</option>
+        <option value="Guinea">Guinea</option>
+        <option value="Guinea-bissau">Guinea-bissau</option>
+        <option value="Guyana">Guyana</option>
+        <option value="Haiti">Haiti</option>
+        <option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option>
+        <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+        <option value="Honduras">Honduras</option>
+        <option value="Hong Kong">Hong Kong</option>
+        <option value="Hungary">Hungary</option>
+        <option value="Iceland">Iceland</option>
+        <option value="India">India</option>
+        <option value="Indonesia">Indonesia</option>
+        <option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+        <option value="Iraq">Iraq</option>
+        <option value="Ireland">Ireland</option>
+        <option value="Isle of Man">Isle of Man</option>
+        <option value="Israel">Israel</option>
+        <option value="Italy">Italy</option>
+        <option value="Jamaica">Jamaica</option>
+        <option value="Japan">Japan</option>
+        <option value="Jersey">Jersey</option>
+        <option value="Jordan">Jordan</option>
+        <option value="Kazakhstan">Kazakhstan</option>
+        <option value="Kenya">Kenya</option>
+        <option value="Kiribati">Kiribati</option>
+        <option value="Korea, Democratic People&apos;s Republic of">Korea, Democratic People's Republic of</option>
+        <option value="Korea, Republic of">Korea, Republic of</option>
+        <option value="Kuwait">Kuwait</option>
+        <option value="Kyrgyzstan">Kyrgyzstan</option>
+        <option value="Lao People&apos;s Democratic Republic">Lao People's Democratic Republic</option>
+        <option value="Latvia">Latvia</option>
+        <option value="Lebanon">Lebanon</option>
+        <option value="Lesotho">Lesotho</option>
+        <option value="Liberia">Liberia</option>
+        <option value="Libya">Libya</option>
+        <option value="Liechtenstein">Liechtenstein</option>
+        <option value="Lithuania">Lithuania</option>
+        <option value="Luxembourg">Luxembourg</option>
+        <option value="Macao">Macao</option>
+        <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of</option>
+        <option value="Madagascar">Madagascar</option>
+        <option value="Malawi">Malawi</option>
+        <option value="Malaysia">Malaysia</option>
+        <option value="Maldives">Maldives</option>
+        <option value="Mali">Mali</option>
+        <option value="Malta">Malta</option>
+        <option value="Marshall Islands">Marshall Islands</option>
+        <option value="Martinique">Martinique</option>
+        <option value="Mauritania">Mauritania</option>
+        <option value="Mauritius">Mauritius</option>
+        <option value="Mayotte">Mayotte</option>
+        <option value="Mexico">Mexico</option>
+        <option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+        <option value="Moldova, Republic of">Moldova, Republic of</option>
+        <option value="Monaco">Monaco</option>
+        <option value="Mongolia">Mongolia</option>
+        <option value="Montenegro">Montenegro</option>
+        <option value="Montserrat">Montserrat</option>
+        <option value="Morocco">Morocco</option>
+        <option value="Mozambique">Mozambique</option>
+        <option value="Myanmar">Myanmar</option>
+        <option value="Namibia">Namibia</option>
+        <option value="Nauru">Nauru</option>
+        <option value="Nepal">Nepal</option>
+        <option value="Netherlands">Netherlands</option>
+        <option value="New Caledonia">New Caledonia</option>
+        <option value="New Zealand">New Zealand</option>
+        <option value="Nicaragua">Nicaragua</option>
+        <option value="Niger">Niger</option>
+        <option value="Nigeria">Nigeria</option>
+        <option value="Niue">Niue</option>
+        <option value="Norfolk Island">Norfolk Island</option>
+        <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+        <option value="Norway">Norway</option>
+        <option value="Oman">Oman</option>
+        <option value="Pakistan">Pakistan</option>
+        <option value="Palau">Palau</option>
+        <option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
+        <option value="Panama">Panama</option>
+        <option value="Papua New Guinea">Papua New Guinea</option>
+        <option value="Paraguay">Paraguay</option>
+        <option value="Peru">Peru</option>
+        <option value="Philippines">Philippines</option>
+        <option value="Pitcairn">Pitcairn</option>
+        <option value="Poland">Poland</option>
+        <option value="Portugal">Portugal</option>
+        <option value="Puerto Rico">Puerto Rico</option>
+        <option value="Qatar">Qatar</option>
+        <option value="Reunion">Reunion</option>
+        <option value="Romania">Romania</option>
+        <option value="Russian Federation">Russian Federation</option>
+        <option value="Rwanda">Rwanda</option>
+        <option value="Saint Barthelemy">Saint Barthelemy</option>
+        <option value="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</option>
+        <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+        <option value="Saint Lucia">Saint Lucia</option>
+        <option value="Saint Martin (French part)">Saint Martin (French part)</option>
+        <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+        <option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option>
+        <option value="Samoa">Samoa</option>
+        <option value="San Marino">San Marino</option>
+        <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+        <option value="Saudi Arabia">Saudi Arabia</option>
+        <option value="Senegal">Senegal</option>
+        <option value="Serbia">Serbia</option>
+        <option value="Seychelles">Seychelles</option>
+        <option value="Sierra Leone">Sierra Leone</option>
+        <option value="Singapore">Singapore</option>
+        <option value="Sint Maarten (Dutch part)">Sint Maarten (Dutch part)</option>
+        <option value="Slovakia">Slovakia</option>
+        <option value="Slovenia">Slovenia</option>
+        <option value="Solomon Islands">Solomon Islands</option>
+        <option value="Somalia">Somalia</option>
+        <option value="South Africa">South Africa</option>
+        <option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option>
+        <option value="South Sudan">South Sudan</option>
+        <option value="Spain">Spain</option>
+        <option value="Sri Lanka">Sri Lanka</option>
+        <option value="Sudan">Sudan</option>
+        <option value="Suriname">Suriname</option>
+        <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+        <option value="Swaziland">Swaziland</option>
+        <option value="Sweden">Sweden</option>
+        <option value="Switzerland">Switzerland</option>
+        <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+        <option value="Taiwan, Province of China">Taiwan, Province of China</option>
+        <option value="Tajikistan">Tajikistan</option>
+        <option value="Tanzania, United Republic of">Tanzania, United Republic of</option>
+        <option value="Thailand">Thailand</option>
+        <option value="Timor-leste">Timor-leste</option>
+        <option value="Togo">Togo</option>
+        <option value="Tokelau">Tokelau</option>
+        <option value="Tonga">Tonga</option>
+        <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+        <option value="Tunisia">Tunisia</option>
+        <option value="Turkey">Turkey</option>
+        <option value="Turkmenistan">Turkmenistan</option>
+        <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+        <option value="Tuvalu">Tuvalu</option>
+        <option value="Uganda">Uganda</option>
+        <option value="Ukraine">Ukraine</option>
+        <option value="United Arab Emirates">United Arab Emirates</option>
+        <option value="United Kingdom">United Kingdom</option>
+        <option value="United States">United States</option>
+        <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+        <option value="Uruguay">Uruguay</option>
+        <option value="Uzbekistan">Uzbekistan</option>
+        <option value="Vanuatu">Vanuatu</option>
+        <option value="Venezuela, Bolivarian Republic of">Venezuela, Bolivarian Republic of</option>
+        <option value="Viet Nam">Viet Nam</option>
+        <option value="Virgin Islands, British">Virgin Islands, British</option>
+        <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+        <option value="Wallis and Futuna">Wallis and Futuna</option>
+        <option value="Western Sahara">Western Sahara</option>
+        <option value="Yemen">Yemen</option>
+        <option value="Zambia">Zambia</option>
+        <option value="Zimbabwe">Zimbabwe</option>
+    </select>
+    <div class="invalid-feedback">Please choose an option</div>
+    </div>
+  </div>
+
+  <div class="form-group"> 
+    <div class="input-group mb-3">
+        <label class="input-group-text" for="age">What is your age range?</label>
+
+      <select class="custom-select" id="age" name="age" required>
+        <option value="">Choose...</option>
+        <option value="15-25">15-25</option>
+        <option value="25-40">25-40</option>
+        <option value="41-55">41-55</option>
+        <option value="55+">55+</option>
+        <option value="Prefer not to say">Prefer not to say</option>
+      </select>
+      <div class="input-group-append">
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group"> 
+    <div class="input-group mb-3">
+      <label class="input-group-text" for="gender">What is your gender?</label>
+
+      <select class="custom-select" id="gender" name="gender" required>
+        <option value="">Choose...</option>
+        <option value="Female">Female</option>
+        <option value="Male">Male</option>
+        <option value="Prefer not to say">Prefer not to say</option>
+      </select>
+      <div class="input-group-append">
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class= "input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="topcity">Select your favorite cities you've</span>
+      </div>
+        <!--<label class="input-group-text" for="topcity"> Choose your favorite 3-5 cities you've traveled to</label>-->
+      <select class="chzn-select" multiple="true" name="topcity" style="width:200px;">
+        <option value="Abu Dhabi">Abu Dhabi, United Arab Emirates</option>
+        <option value="Accra">Accra, Ghana</option>
+        <option value="Agra">Agra, India</option>
+        <option value="Amman">Amman, Jordan</option>
+        <option value="Amsterdam">Amsterdam, Netherlands</option>
+        <option value="Antalya">Antalya, Turkey</option>
+        <option value="Athens">Athens, Greece</option>
+        <option value="Atlanta">Atlanta, USA</option>
+        <option value="Auckland">Auckland, New Zealand</option>
+        <option value="Bangalore">Bangalore, India</option>
+        <option value="Bangkok">Bangkok, Thailand</option>
+        <option value="Barcelona">Barcelona, Spain</option>
+        <option value="Batam">Batam, Indonesia</option>
+        <option value="Beijing">Beijing, China</option>
+        <option value="Beirut">Beirut, Lebanon</option>
+        <option value="Berlin">Berlin, Germany</option>
+        <option value="Bogota">Bogota, Colombia</option>
+        <option value="Boston">Boston, USA</option>
+        <option value="Brussels">Brussels, Belgium</option>
+        <option value="Bucharest">Bucharest, Romania</option>
+        <option value="Budapest">Budapest, Hungary</option>
+        <option value="Buenos Aires">Buenos Aires, Argentina</option>
+        <option value="Cairo">Cairo, Egypt</option>
+        <option value="Cancun">Cancun, Mexico</option>
+        <option value="Cape Town">Cape Town, South Africa</option>
+        <option value="Casablanca">Casablanca, Morocco</option>
+        <option value="Cebu City">Cebu City, Philippines</option>
+        <option value="Chengdu">Chengdu, China</option>
+        <option value="Chennai">Chennai, India</option>
+        <option value="Chiang Mai">Chiang Mai, Thailand</option>
+        <option value="Chiba">Chiba, Japan</option>
+        <option value="Chicago">Chicago, USA</option>
+        <option value="Colombo">Colombo, Sri Lanka</option>
+        <option value="Copenhagen">Copenhagen, Denmark</option>
+        <option value="Da Nang">Da Nang, Vietnam</option>
+        <option value="Dalian">Dalian, China</option>
+        <option value="Dallas">Dallas, USA</option>
+        <option value="Dammam">Dammam, Saudi Arabia</option>
+        <option value="Delhi">Delhi, India</option>
+        <option value="Denpasar">Denpasar, Indonesia</option>
+        <option value="Dubai">Dubai, United Arab Emirates</option>
+        <option value="Dublin">Dublin, Ireland</option>
+        <option value="Durban">Durban, South Africa</option>
+        <option value="Dusseldorf">Dusseldorf, Germany</option>
+        <option value="Edinburgh">Edinburgh, United Kingdom</option>
+        <option value="Florence">Florence, Italy</option>
+        <option value="Frankfurt">Frankfurt, Germany</option>
+        <option value="Fukuoka">Fukuoka, Japan</option>
+        <option value="Geneva">Geneva, Switzerland</option>
+        <option value="Guangzhou">Guangzhou, China</option>
+        <option value="Ha Long">Ha Long, Vietnam</option>
+        <option value="Heraklion">Heraklion, Greece</option>
+        <option value="Ho Chi Minh City">Ho Chi Minh City, Vietnam</option>
+        <option value="Hong Kong">Hong Kong, Hong Kong</option>
+        <option value="Honolulu">Honolulu, USA</option>
+        <option value="Houston">Houston, USA</option>
+        <option value="Hurghada">Hurghada, Egypt</option>
+        <option value="Istanbul">Istanbul, Turkey</option>
+        <option value="Jaipur">Jaipur, India</option>
+        <option value="Jakarta">Jakarta, Indonesia</option>
+        <option value="Juju">Juju, South Korea</option>
+        <option value="Jerusalem">Jerusalem, Israel</option>
+        <option value="Johannesburg">Johannesburg, South Afria</option>
+        <option value="Johor Bahru">Johor Bahru, Malaysia</option>
+        <option value="Kolkata">Kolkata, India</option>
+        <option value="Krabi">Krabi, Thailand</option>
+        <option value="Krakow">Krakow, Poland</option>
+        <option value="Kuala Lumpur">Kuala Lumpur, Malaysia</option>
+        <option value="Kyoto">Kyoto, Japan</option>
+        <option value="Las Vegas">Las Vegas, USA</option>
+        <option value="Lima">Lima, Peru</option>
+        <option value="Lisbon">Lisbon, Portugal</option>
+        <option value="London">London, United Kingdom</option>
+        <option value="Los Angeles">Los Angeles, USA</option>
+        <option value="Macau">Macau, Macau</option>
+        <option value="Madrid">Madrid, Spain</option>
+        <option value="Manila">Manila, Philippines</option>
+        <option value="Marrakesh">Marrakesh, Morocco</option>
+        <option value="Mecca">Mecca, Saudi Arabia</option>
+        <option value="Medina">Medina, Saudi Arabia</option>
+        <option value="Melbourne">Melbourne, Australia</option>
+        <option value="Mexico City">Mexico City, Mexico</option>
+        <option value="Miami">Miami, USA</option>
+        <option value="Milan">Milan, Italy</option>
+        <option value="Montevido">Montevido, Uruguay</option>
+        <option value="Montreal">Montreal, Cananda</option>
+        <option value="Moscow">Moscow, Russia</option>
+        <option value="Mugla">Mugla, Turkey</option>
+        <option value="Mumbai">Mumbai, India</option>
+        <option value="Munich">Munich, Germany</option>
+        <option value="New York City">New York City, USA</option>
+        <option value="Nice">Nice, France</option>
+        <option value="Orlando">Orlando, USA</option>
+        <option value="Osaka">Osaka, Japan</option>
+        <option value="Paris">Paris, France</option>
+        <option value="Pattaya">Pattaya, Thailand</option>
+        <option value="Penang Island">Penang Island, Malaysia</option>
+        <option value="Philadelphia">Philadelphia, USA</option>
+        <option value="Phuket">Phuket, Thailand</option>
+        <option value="Porto">Porto, Portugal</option>
+        <option value="Prague">Prague, Czech Republic</option>
+        <option value="Pune">Pune, India</option>
+        <option value="Punta Cana">Punta Cana, Dominican Republic</option>
+        <option value="Qingdao">Qingdao, China</option>
+        <option value="Quito">Quito, Ecuador</option>
+        <option value="Rhodes">Rhodes, Greece</option>
+        <option value="Rio de Janeiro">Rido de Janeiro, Brazil</option>
+        <option value="Riyadh">Riyadh, Saudi Arabia</option>
+        <option value="Rome">Rome, Italy</option>
+        <option value="Saint Petersburg">Saint Petersburg, Russia</option>
+        <option value="San Francisco">San Francisco, USA</option>
+        <option value="San Jose">San Jose, USA</option>
+        <option value="Sao Paulo">Sao Paulo, Brazil</option>
+        <option value="Seoul">Seoul, South Korea</option>
+        <option value="Shanghai">Shanghai, China</option>
+        <option value="Shenzhen">Shenzhen, China</option>
+        <option value="Singapore">Singapore, Singapore</option>
+        <option value="Sofia">Sofia, Bulgaria</option>
+        <option value="Stockholm">Stockholm, Sweden</option>
+        <option value="Sydney">Sydney, Australia</option>
+        <option value="Taipei">Taipei, Taiwan</option>
+        <option value="Tehran">Tehran, Iran</option>
+        <option value="Tel Aviv">Tel Aviv, Israel</option>
+        <option value="Tianjin">Tianjin, China</option>
+        <option value="Tokyo">Tokyo, Japan</option>
+        <option value="Toronto">Toronto, Cananda</option>
+        <option value="Vancouver">Vancouver, Cananda</option>
+        <option value="Venice">Venice, Italy</option>
+        <option value="Vienna">Vienna, Austria</option>
+        <option value="Warsaw">Warsaw, Poland</option>
+        <option value="Washington D.C.">Washington D.C., USA</option>
+        <option value="Xi'an">Xi'an, Cina</option>
+        <option value="Xiamen">Xiamen, China</option>
+        <option value="Zhuhai">Zhuhai, China</option>
+        <option value="Zurich">Zurich, Switzerland</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group"> 
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="continent">Which continent do you want to travel to?  </span>
+        </div>
+
+        <!---<label class="input-group-text" for="continent">Which continent do you want to travel to?</label>-->
+
+      <select class="custom-select" id="continent" name="continent" required>
+        <option value="">Choose...</option>
+        <option value="Africa">Africa</option>
+        <option value="Australia">Australia</option>
+        <option value="Asia">Asia</option>
+        <option value="Europe">Europe</option>
+        <option value="North America">North America</option>
+        <option value="South America">South America</option>
+        <option value="anywhere">I'll go anywhere</option>
+      </select>
+      <!--<div class="input-group-append">-->
+      </div>
+    </div>
+  </div>
+
+  <div class="input-group mb-3">
+    <div class="row">
+      <label class="input-group-text" for="food">What price range of restaurant do you eat at when you travel? </label>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row label">
+        <div class="col-md-1"></div>
+        <div class="col-md-1">
+          <label> Always</label>
+        </div>
+        <div class="col-md-1">
+          <label> Often</label>
+        </div>
+        <div class="col-md-1">
+          <label> Sometimes</label>
+        </div>
+        <div class="col-md-1">
+          <label> Rarely</label>
+        </div>
+        <div class="col-md-1">
+          <label> Never</label>
+        </div>
+    </div>
+    <div class="row food1 border-bottom">
+        <div class="col-md-1">
+
+            <label>Price level 1: (Fast Food/Cheap Eats)</label><hr>
+
+        </div>
+        <div class="col-md-1">
+          <input type="radio" name="food1" value="always1" required>
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="food1" value="often1" required>
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="food1" value="sometimes1" required>
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="food1" value="rarely1" required>
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="food1" value="never1" required>
+        </div>
+    </div>
+
+    <div class="row food2 border-bottom">
+        <div class="col-md-1">
+          <label>Price level 2: (Casual Dining)</label>
+        </div>
+        <div class="col-md-1">
+          <input type="radio" name="food2" value="always2" required>
+        </div>
+        <div class="col-md-1">
+          <input type="radio" name="food2" value="often2">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="food2" value="sometimes2">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="food2" value="rarely2">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="food2" value="never2">
+        </div>
+    </div>
+
+    <div class="row food3 border-bottom">
+        <div class="col-md-1">
+          <label>Price level 3: (Casual Dining)</label>
+        </div>
+        <div class="col-md-1">
+          <input type="radio" name="food3" value="always3" required>
+        </div>
+        <div class="col-md-1">
+          <input type="radio" name="food3" value="often3">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="food3" value="sometimes3">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="food3" value="rarely3">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="food3" value="never3">
+        </div>
+    </div>
+    <div class="row food4">
+        <div class="col-md-1">
+          <label>Price level 4: (Fine Dining / High End)</label>
+        </div>
+        <div class="col-md-1">
+          <input type="radio" name="food4" value="always4" required>
+        </div>
+        <div class="col-md-1">
+          <input type="radio" name="food4" value="often4">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="food4" value="sometimes4">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="food4" value="rarely4">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="food4" value="never4">
+        </div>
+    </div>
+  </div>
+
+
+  
+  <div class="input-group mb-3">
+    <div class="row">
+      <label class="input-group-text" for="attraction">From the following types of tourist attractions, which ones are you likely to go do while traveling? </label>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="row label attraction border-bottom">
+      <div class="col-md-1"></div>
+        <div class="col-md-1">
+          <label> 4 (Definitely would go)</label>
+        </div>
+        <div class="col-md-1">
+          <label> 3</label>
+        </div>
+        <div class="col-md-1">
+          <label> 2</label>
+        </div>
+        <div class="col-md-1">
+          <label> 1 (Would NOT go)</label>
+        </div>
+    </div>
+    <div class="row amusementpark border-bottom">
+        <div class="col-md-1">
+          <label>Amusement Park</label>
+        </div>
+        <div class="col-md-1">
+          <input type="radio" name="amusementpark" value="amusementpark4" required>
+        </div>
+        <div class="col-md-1">
+          <input type="radio" name="amusementpark" value="amusementpark3">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="amusementpark" value="amusementpark2">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="amusementpark" value="amusementpark1">
+        </div>
+    </div>
+    <div class="row artgallery border-bottom">
+        <div class="col-md-1">
+          <label>Art Gallery</label>
+        </div>
+        <div class="col-md-1">
+          <input type="radio" name="artgallery" value="artgallery4" required>
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="artgallery" value="artgallery3">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="artgallery" value="artgallery2">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="artgallery" value="artgallery1">
+        </div>
+    </div>
+
+    <div class="row aquarium border-bottom">
+        <div class="col-md-1">
+          <label>Aquarium</label>
+        </div>
+        <div class="col-md-1">
+          <input type="radio" name="aqarium" value="aquarium4" required>
+        </div>
+        <div class="col-md-1">
+          <input type="radio" name="aqarium" value="aquarium3">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="aqarium" value="aquarium2">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="aqarium" value="aquarium1">
+        </div>
+    </div>
+    <div class="row library border-bottom">
+        <div class="col-md-1">
+          <label>Library</label>
+        </div>
+        <div class="col-md-1">
+          <input type="radio" value="library" value="library4" required>
+        </div>
+        <div class="col-md-1">
+          <input type="radio" value="library" value="library3">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" value="library" value="library2">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" value="library" value="library1">
+        </div>
+    </div>
+    <div class="row movietheater border-bottom">
+        <div class="col-md-1">
+          <label>Movie Theater</label>
+        </div>
+        <div class="col-md-1">
+          <input type="radio" name="movietheater" value="movietheater4" required>
+        </div>
+        <div class="col-md-1">
+          <input type="radio" name="movietheater" value="movietheater3">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="movietheater" value="movietheater2">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="movietheater" value="movietheater1">
+        </div>
+    </div>
+    <div class="row museum border-bottom">
+        <div class="col-md-1">
+          <label>Museum</label>
+        </div>
+        <div class="col-md-1">
+          <input type="radio" name="museum" value="museum4" required>
+        </div>
+        <div class="col-md-1">
+          <input type="radio" name="museum" value="museum3">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="museum" value="museum2">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="museum" value="museum1">
+        </div>
+    </div>
+    <div class="row store border-bottom">
+        <div class="col-md-1">
+          <label>Mall / Souvenir shop</label>
+        </div>
+        <div class="col-md-1">
+          <input type="radio" name="store" value="store4" required>
+        </div>
+        <div class="col-md-1">
+          <input type="radio" name="store" value="store3">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="store" value="store2">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="store" value="store1">
+        </div>
+    </div>
+    <div class="row naturalfeature border-bottom">
+        <div class="col-md-1">
+          <label>Natural Feature / Beach</label>
+        </div>
+        <div class="col-md-1">
+          <input type="radio" name="naturalfeature" value="naturalfeature4" required>
+        </div>
+        <div class="col-md-1">
+          <input type="radio" name="naturalfeature" value="naturalfeature3">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="naturalfeature" value="naturalfeature2">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="naturalfeature" value="naturalfeature1">
+        </div>
+    </div>
+    <div class="row park border-bottom">
+        <div class="col-md-1">
+          <label>Park</label>
+        </div>
+        <div class="col-md-1">
+          <input type="radio" name="park" value="park4" required>
+        </div>
+        <div class="col-md-1">
+          <input type="radio" name="park" value="park3">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="park" value="park2">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="park" value="park1">
+        </div>
+    </div>
+      <div class="row temple border-bottom">
+        <div class="col-md-1">
+          <label>Place of Worship (Church/Temple)</label>
+        </div>
+        <div class="col-md-1">
+          <input type="radio" name="temple" value="temple4" required>
+        </div>
+        <div class="col-md-1">
+          <input type="radio" name="temple" value="temple3">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="temple" value="temple2">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="temple" value="temple1">
+        </div>
+    </div>
+      <div class="row zoo">
+        <div class="col-md-1">
+          <label>Zoo</label>
+        </div>
+        <div class="col-md-1">
+          <input type="radio" name="zoo" value="zoo4" required>
+        </div>
+        <div class="col-md-1">
+          <input type="radio" name="zoo" value="zoo3">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="zoo" value="zoo2">
+        </div>
+        <div class="col-md-1">
+           <input type="radio" name="zoo" value="zoo1">
+        </div>
+      </div>
+  </div>
+  
+  <div class="form-group">
+    <input class="btn btn-secondary btn-lg float-right" type="submit" value="lets go!">
+  </div>
+</form>
+
+
+
+ 
+<!--</main>-->
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script type="text/javascript">$(function() {$(".chzn-select").chosen({max_selected_options: 5});});</script>
+    <script src="static/js/chosen.jquery.min.js"></script>
+
+   
+  
+  </body>
+</html>
