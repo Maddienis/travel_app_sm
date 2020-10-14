@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-import utils_feature as utils 
+import src.features.utils_feature as utils 
 import src.data.db_connect as db
 
 # This pulls from survey table and selects only attraction colummns

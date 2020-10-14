@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import ast
-import utils_feature as utils
+import src.features.utils_feature as utils
 import src.data.db_connect as db
 
 PLACE_OF_WORSHIP = ['place_of_worship', 'hindu_temple', 'church', 'mosque', 'synagogue']

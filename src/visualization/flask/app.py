@@ -25,6 +25,9 @@ def index():
 
 	return render_template('starter_template_new.html')
 
+def featureClean(user_input):
+
+	return
 
 @app.route('/handle_data', methods=['POST'])
 def handle_data():
