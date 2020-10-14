@@ -1,3 +1,4 @@
+import pandas as pd
 from flask import Flask, render_template, request, redirect
 
 app = Flask(__name__)
@@ -13,19 +14,20 @@ def index():
 	if request.method == "POST":
 		#Can delete this
 		req = request.form
-		print(req)
 
-		homecountry = request.form["homeCountry"]
-		age = request.form["age"]
-		gender = request.form["gender"]
+		top_city = request.form.getlist('topcity')
 
-		print(homecountry)
+		print(top_city)
+		d = request.form.to_dict()
+		df = pd.DataFrame([d])
+		print(df)
+		print(type(df))
 
-		return redirect(request.url)
 
+		return redirect(request.url, req=req)
 	return render_template('starter_template_new.html')
 
-def featureClean(user_input):
+def featureSelect(user_input):
 
 	return
 
