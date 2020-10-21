@@ -35,9 +35,18 @@ def results():
 		d = request.form.to_dict()
 		df = pd.DataFrame([d])
 		top_city = request.form.getlist('topcity')
-		print(top_city)
+		dict_keys = []
+		for city_num in range(len(top_city)):
+			dict_keys.append(city_num)
+
+		city_dict = dict(zip(dict_keys, top_city))
+		#df = df.concat(city_dict, ignore_index=True)
+		df2 = transformUserInput(df, top_city)
+		print(type(top_city))
+		print(df)
 	
-	return render_template('results.html', city_rec = top_city)
+	return render_template('results.html', tables = [df2.to_html(classes='data')], cols = df2.columns.values, topcity=top_city, topcity2=city_dict)
+
 	
 
 
@@ -47,9 +56,12 @@ def recommend(df):
 	return "WORK OKAY"
 
 
-def transformUserInput(ok):
-	print(ok)
-	return ok
+def transformUserInput(df, top_city_list):
+	for c in range(len(top_city_list)):
+		df['top_city' + str(c)] = top_city_list[c]
+
+
+	return df
 
 
 

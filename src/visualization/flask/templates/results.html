@@ -1,7 +1,19 @@
 <!doctype html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
   <h1> Yes this is where you should go</h1>
 
+</body>
+	{% for table in tables %}
+	            {{cols[loop.index]}}
+	            {{ table|safe }}
+	{% endfor %}
 
-  	{{ city_rec }}
+	{{topcity}}
+	{{topcity2}}
+</body>
+
  </html>
