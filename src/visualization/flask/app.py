@@ -40,12 +40,11 @@ def results():
 			dict_keys.append(city_num)
 
 		city_dict = dict(zip(dict_keys, top_city))
-		#df = df.concat(city_dict, ignore_index=True)
 		df2 = transformUserInput(df, top_city)
 		print(type(top_city))
 		print(df)
 	
-	return render_template('results.html', tables = [df2.to_html(classes='data')], cols = df2.columns.values, topcity=top_city, topcity2=city_dict)
+	return render_template('results.html', tables = [df2.to_html(classes='data')], cols = df2.columns.values, topcity=top_city)
 
 	
 
@@ -58,7 +57,7 @@ def recommend(df):
 
 def transformUserInput(df, top_city_list):
 	for c in range(len(top_city_list)):
-		df['top_city' + str(c)] = top_city_list[c]
+		df['favorite_city_' + str(c)] = top_city_list[c]
 
 
 	return df
