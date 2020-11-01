@@ -58,33 +58,29 @@ def recommend(df):
 
 def transformUserInput(df, top_city_list):
 	
-	k = 1
-	while k < 6:
-		if len(top_city_list) >= 1:
-			df['favorite_city_one'] = top_city_list[0]
-		else:
-			df['favorite_city_one'] = np.nan
-		k +=1
-		if len(top_city_list) >= 2:
-			df['favorite_city_two'] = top_city_list[1]
-		else:
-			df['favorite_city_two'] = np.nan
-		k +=1
-		if len(top_city_list) >= 3:
-			df['favorite_city_three'] = top_city_list[2]
-		else:
-			df['favorite_city_three'] = np.nan
-		k +=1
-		if len(top_city_list) >= 4:
-			df['favorite_city_four'] = top_city_list[3]
-		else:
-			df['favorite_city_four'] = np.nan
-		k +=1
-		if len(top_city_list) == 5:
-			df['favorite_city_five'] = top_city_list[4]
-		else:
-			df['favorite_city_five'] = np.nan
-		k +=1
+
+	if len(top_city_list) >= 1:
+		df['favorite_city_one'] = top_city_list[0]
+	else:
+		df['favorite_city_one'] = np.nan
+	if len(top_city_list) >= 2:
+		df['favorite_city_two'] = top_city_list[1]
+	else:
+		df['favorite_city_two'] = np.nan
+	if len(top_city_list) >= 3:
+		df['favorite_city_three'] = top_city_list[2]
+	else:
+		df['favorite_city_three'] = np.nan
+	if len(top_city_list) >= 4:
+		df['favorite_city_four'] = top_city_list[3]
+	else:
+		df['favorite_city_four'] = np.nan
+	if len(top_city_list) == 5:
+		df['favorite_city_five'] = top_city_list[4]
+	else:
+		df['favorite_city_five'] = np.nan
+
+
 
 
 	return df
