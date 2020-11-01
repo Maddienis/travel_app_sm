@@ -30,5 +30,5 @@ def startToEnd():
     
     return finished	
 
-#work = startToEnd()
-#print(type(work))
+work = startToEnd()
+print(work)
