@@ -36,6 +36,7 @@ def results():
 		d = request.form.to_dict()
 		df = pd.DataFrame([d])
 		top_city = request.form.getlist('topcity')
+		cont = request.form.get('continent')
 		dict_keys = []
 		for city_num in range(len(top_city)):
 			dict_keys.append(city_num)
@@ -45,7 +46,7 @@ def results():
 		print(type(top_city))
 		print(df)
 	
-	return render_template('results.html', tables = [df2.to_html(classes='data')], cols = df2.columns.values, topcity=top_city)
+	return render_template('results.html', tables = [df2.to_html(classes='data')], cols = df2.columns.values, topcity=cont)
 
 	
 
@@ -81,6 +82,7 @@ def transformUserInput(df, top_city_list):
 		df['favorite_city_five'] = np.nan
 
 
+	df.drop(columns=['topcity', 'continent'], inplace=True)
 
 
 	return df
