@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 from flask import Flask, render_template, request, redirect, url_for
+import src.features.predict_features as predict_features
 
 app = Flask(__name__)
 
@@ -36,17 +37,18 @@ def results():
 		d = request.form.to_dict()
 		df = pd.DataFrame([d])
 		top_city = request.form.getlist('topcity')
-		cont = request.form.get('continent')
+		global CONTINENT_CHOICE 
+		CONTINENT_CHOICE = request.form.get('continent')
 		dict_keys = []
 		for city_num in range(len(top_city)):
 			dict_keys.append(city_num)
 
 		city_dict = dict(zip(dict_keys, top_city))
-		df2 = transformUserInput(df, top_city)
+		df2 = transformUserInput(df, top_city, CONTINENT_CHOICE)
 		print(type(top_city))
 		print(df)
 	
-	return render_template('results.html', tables = [df2.to_html(classes='data')], cols = df2.columns.values, topcity=cont)
+	return render_template('results.html', tables = [df2.to_html(classes='data')], cols = df2.columns.values, topcity=CONTINENT_CHOICE)
 
 	
 
@@ -57,7 +59,7 @@ def recommend(df):
 	return "WORK OKAY"
 
 
-def transformUserInput(df, top_city_list):
+def transformUserInput(df, top_city_list, continent):
 	
 
 	if len(top_city_list) >= 1:
@@ -84,8 +86,13 @@ def transformUserInput(df, top_city_list):
 
 	df.drop(columns=['topcity', 'continent'], inplace=True)
 
+	df2 = predict_features.createPredictFeatures(df)
 
-	return df
+	df3 = predict_features.columnSelection(df2)
+	selected = predict_features.citySelection(df3, continent)
+
+
+	return selected
 
 
 
