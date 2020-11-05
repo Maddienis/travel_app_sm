@@ -45,10 +45,11 @@ def results():
 
 		city_dict = dict(zip(dict_keys, top_city))
 		df2 = transformUserInput(df, top_city, CONTINENT_CHOICE)
+
 		print(type(top_city))
 		print(df)
 	
-	return render_template('results.html', tables = [df2.to_html(classes='data')], cols = df2.columns.values, topcity=CONTINENT_CHOICE)
+	return render_template('results.html', tables = [df2.to_html(classes='data')], cols = df2.columns.values, city1=df2.index[0][1], city2=df2.index[1][1], city3=df2.index[2][1])
 
 	
 

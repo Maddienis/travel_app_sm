@@ -44,8 +44,15 @@ def dummies(df):
 def attractionCount(dummies_df, all_attractions_df):
     
     all_attractions_df = pd.concat([all_attractions_df, dummies_df], axis=1)
-    type_col_names = ATTRACTIONS_TO_KEEP
+    type_col_names = []
+    print(type_col_names)
+    print("after empied")
+    type_col_names = ATTRACTIONS_TO_KEEP.copy()
+    print(type_col_names)
+    print('before')
     type_col_names.extend(['country', 'city', 'id'])
+    print(type_col_names)
+    print('after')
     attraction_count = all_attractions_df[type_col_names].groupby(['country', 'city', 'id']).sum()
 
     return attraction_count, all_attractions_df
