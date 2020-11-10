@@ -33,14 +33,22 @@ fieldset {
     border-width:6px;
 }
 
+.container-head {
+    border-style: solid;
+    background-color: #99ccff;
+    border-width: 3px;
+    border-radius: 25px;
+    width: 100%;
+
+}
+
 .container {
     border-style: solid;
     border-width: 3px;
     border-radius: 25px;
-    width: 110%;
+    width: 100%;
 
 }
-
 .border-bottom {
     border-bottom:1px solid #ccc
 }
@@ -53,10 +61,20 @@ fieldset {
   width: 100%;
 }
 
-.jumbotron {
+.jumbotron-main {
   background-image: url("travel_pic.jpg");
   background-size: cover;
   text-align: center;
+  padding-top: 3.5rem;
+
+}
+
+.jumbotron-results {
+  background-image: url("heading_pic2.png");
+  background-size: cover;
+  text-align: center;
+  padding-top: 3.5rem;
+
 }
 
 .instructions {
