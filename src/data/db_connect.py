@@ -1,12 +1,12 @@
 import sqlite3
 import pandas as pd
 
-try:
-	conn = sqlite3.connect('/Users/tristannisbet/Documents/travel_app/places.db')
-	print('Opened database')
+#try:
+#	conn = sqlite3.connect('/Users/tristannisbet/Documents/travel_app/places.db')
+#	print('Opened database')
 
-except Exception as e:
-	print('Error durring connection: ', str(e))
+#except Exception as e:
+#	print('Error durring connection: ', str(e))
 
 
 # Where does my connnection function have to be?
@@ -60,5 +60,22 @@ def get_df(table_name):
     df = pd.read_sql_query(sql, conn)
 
     return df
+
+def get_country(city_name):
+    try:
+        conn = sqlite3.connect('/Users/tristannisbet/Documents/travel_app/places.db')
+
+    except Exception as e:
+        print('Error durring connection: ', str(e))
+
+    sql = """select country from cities where city == '{}'""".format(city_name)
+    country = pd.read_sql_query(sql, conn)
+    
+    txt = str(country.values)
+    ok = txt.strip("[]''")
+
+    return ok
+
+
 
 

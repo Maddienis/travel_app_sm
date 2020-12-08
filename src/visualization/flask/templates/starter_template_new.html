@@ -42,7 +42,11 @@
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="https://www.linkedin.com/in/maddie-nisbet/">About Me</a>
+        <a class="nav-link" href="https://www.linkedin.com/in/maddie-nisbet/">LinkedIn</a>
+
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/Maddienis/travel_app_sm">GitHub</a>
 
       </li>
     </ul>
@@ -52,7 +56,7 @@
   <div class="jumbotron-main">
     <br><br><br>
     <h1 class="display-4">City Travel Recommender</h1>
-    <p class="lead">Just enter a couple of questions to recieve your next vacation destination.</p>
+    <p class="lead">Just answer a couple of questions to recieve your next vacation destination.</p>
     <hr class="my-4">
     
     <br><br><br><br><br><br><br><br><br> 
@@ -364,7 +368,7 @@
   <div class="form-group">
     <div class= "input-group mb-3">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="topcity">Select your favorite cities you've</span>
+        <span class="input-group-text" id="topcity">Select your favorite 3-5 cities you've traveled to</span>
       </div>
         <!--<label class="input-group-text" for="topcity"> Choose your favorite 3-5 cities you've traveled to</label>-->
       <select class="chzn-select" multiple="true" name="topcity" style="width:200px;">
@@ -604,7 +608,7 @@
           <label>Price level 3: (Casual Dining)</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="food_three" value="4" >
+          <input type="radio" name="food_three" value="4" required>
         </div>
         <div class="col-md-1">
           <input type="radio" name="food_three" value="3">
@@ -624,7 +628,7 @@
           <label>Price level 4: (Fine Dining / High End)</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="food_four" value="4" >
+          <input type="radio" name="food_four" value="4" required>
         </div>
         <div class="col-md-1">
           <input type="radio" name="food_four" value="3">
@@ -671,7 +675,7 @@
           <label>Amusement Park</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="amusement_park" value="4" >
+          <input type="radio" name="amusement_park" value="4" required>
         </div>
         <div class="col-md-1">
           <input type="radio" name="amusement_park" value="3">
@@ -688,7 +692,7 @@
           <label>Art Gallery</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="art_gallery" value="4" >
+          <input type="radio" name="art_gallery" value="4" required>
         </div>
         <div class="col-md-1">
            <input type="radio" name="art_gallery" value="3">
@@ -706,7 +710,7 @@
           <label>Aquarium</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="aqarium" value="4" >
+          <input type="radio" name="aqarium" value="4" required>
         </div>
         <div class="col-md-1">
           <input type="radio" name="aqarium" value="3">
@@ -723,7 +727,7 @@
           <label>Library</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="library" value="4" >
+          <input type="radio" name="library" value="4" required>
         </div>
         <div class="col-md-1">
           <input type="radio" name="library" value="3">
@@ -740,7 +744,7 @@
           <label>Movie Theater</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="movie_theater" value="4" >
+          <input type="radio" name="movie_theater" value="4" required>
         </div>
         <div class="col-md-1">
           <input type="radio" name="movie_theater" value="3">
@@ -757,7 +761,7 @@
           <label>Museum</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="museum" value="4" >
+          <input type="radio" name="museum" value="4" required>
         </div>
         <div class="col-md-1">
           <input type="radio" name="museum" value="3">
@@ -774,7 +778,7 @@
           <label>Mall / Souvenir shop</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="shop" value="4" >
+          <input type="radio" name="shop" value="4" required>
         </div>
         <div class="col-md-1">
           <input type="radio" name="shop" value="3">
@@ -791,7 +795,7 @@
           <label>Natural Feature / Beach</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="natural_feature" value="4" >
+          <input type="radio" name="natural_feature" value="4" required>
         </div>
         <div class="col-md-1">
           <input type="radio" name="natural_feature" value="3">
@@ -808,7 +812,7 @@
           <label>Park</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="park" value="4" >
+          <input type="radio" name="park" value="4" required>
         </div>
         <div class="col-md-1">
           <input type="radio" name="park" value="3">
@@ -825,7 +829,7 @@
           <label>Place of Worship (Church/Temple)</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="place_of_worship" value="4" >
+          <input type="radio" name="place_of_worship" value="4" required>
         </div>
         <div class="col-md-1">
           <input type="radio" name="place_of_worship" value="3">
@@ -842,7 +846,7 @@
           <label>Zoo</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="zoo" value="4" >
+          <input type="radio" name="zoo" value="4" required>
         </div>
         <div class="col-md-1">
           <input type="radio" name="zoo" value="3">

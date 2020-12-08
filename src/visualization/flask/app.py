@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from flask import Flask, render_template, request, redirect, url_for
 import src.features.predict_features as predict_features
+import src.data.db_connect as db
 
 app = Flask(__name__)
 
@@ -45,19 +46,14 @@ def results():
 
 		city_dict = dict(zip(dict_keys, top_city))
 		df2 = transformUserInput(df, top_city, CONTINENT_CHOICE)
+		c1, c2, c3 = displayCity(df2)
+		country1 = db.get_country(c1)
+		country2 = db.get_country(c2)
+		country3 = db.get_country(c3)
 
-		print(type(top_city))
-		print(df)
 	
-	return render_template('results.html', tables = [df2.to_html(classes='data')], cols = df2.columns.values, city1=df2.index[0][1], city2=df2.index[1][1], city3=df2.index[2][1])
+	return render_template('results.html', city1=c1 + ',', country1=country1, city2= c2 + ',', country2= country2, city3=c3 + ',', country3=country3)
 
-	
-
-
-@app.route('/recommend/<data>')
-def recommend(df):
-
-	return "WORK OKAY"
 
 
 def transformUserInput(df, top_city_list, continent):
@@ -94,6 +90,18 @@ def transformUserInput(df, top_city_list, continent):
 
 
 	return selected
+
+
+def displayCity(selected_df):
+	
+	city1 = selected_df.index[0][1]
+	city2 = selected_df.index[1][1]
+	city3 = selected_df.index[2][1]
+	
+	
+	return city1, city2, city3
+
+
 
 
 

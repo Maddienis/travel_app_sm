@@ -37,7 +37,6 @@ def createPredictFeatures(user_data):
 
 def columnSelection(completed_matrix):
 	completed_matrix.sort_values('rank', ascending=False, inplace=True)
-	print(completed_matrix.info())
 	slim_matrix = completed_matrix.drop(completed_matrix[completed_matrix['rank'] == 1.0].index)
 	slim_matrix = completed_matrix[['continent_city', 'food_sim', 'attraction_sim', 'sum', 'rank']].copy()
 	slim_matrix.sort_values('sum', ascending=False, inplace=True)
@@ -47,7 +46,6 @@ def columnSelection(completed_matrix):
 
 
 def citySelection(slim_matrix, continent):
-	print(continent)
 
 	if continent == 'anywhere':
 		top_choice = slim_matrix.head(3)
@@ -58,5 +56,6 @@ def citySelection(slim_matrix, continent):
 
 
 	return top_choice
+
 
 

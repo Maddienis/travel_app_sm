@@ -40,9 +40,11 @@
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="https://www.linkedin.com/in/maddie-nisbet/">About Me</a>
+        <a class="nav-link" href="https://www.linkedin.com/in/maddie-nisbet/">LinkedIn</a>
       </li>
-   
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/Maddienis/travel_app_sm">GitHub</a>
+      </li>
     </ul>
   </div>
 </nav>
@@ -54,34 +56,28 @@
     <div class="container-head">
       <br><br><br><br><br><br>
       <h1 class="display-3">Pack your suitcase!</h1>
-      <p>bla blah</p>
+      <h4>These are the top three cities reccomended for you.</h4>
     </div>
   </div>
 
-  <div>
-    {% for table in tables %}
-              {{cols[loop.index]}}
-              {{ table|safe }}
-    {% endfor %}
-  </div>
 
   <div class="container">
     <!-- Example row of columns -->
     <div class="row">
       <div class="col-md-4">
-        <h2>{{city1}}</h2>
+        <h2>{{city1}} {{country1}}</h2>
         <p> </p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        
       </div>
       <div class="col-md-4">
-        <h2>{{city2}}</h2>
+        <h2>{{city2}} {{country2}}</h2>
         <p> </p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        
       </div>
       <div class="col-md-4">
-        <h2>{{city3}}</h2>
+        <h2>{{city3}} {{country3}}</h2>
         <p></p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        
       </div>
     </div>
 
@@ -90,11 +86,11 @@
   </div> <!-- /container -->
 
 </main>
-
+<!--
 <footer class="container">
   <p>&copy; Company 2017-2020</p>
 </footer>
-
+-->
 
 
 
