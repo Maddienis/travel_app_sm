@@ -1,12 +1,12 @@
 import pandas as pd
 import numpy as np
-import food_city as fc
-import survey_user
-import sim_score
-import attraction_city
-import build_sim_matrix as build_sim
-import survey_user
-import city_combine
+import src.features.food_city as fc
+import src.features.survey_user as survey_user
+import src.features.sim_score as sim_score
+import src.features.attraction_city as attraction_city
+import src.features.build_sim_matrix as build_sim
+import src.features.survey_user as survey_user
+import src.features.city_combine as city_combine
 
 def startToEnd():
     

@@ -1,14 +1,19 @@
 import pandas as pd
 import numpy as np
-import utils_feature as utils 
+import src.features.utils_feature as utils 
 import src.data.db_connect as db
 
 # This pulls from survey table and selects only attraction colummns
 # Returns only attraction data to be normalized and sim score
-def createAttractionUserDf():
-    survey = db.get_df('survey_response')
-    user_attraction = survey[['amusement_park', 'art_gallery', 'aquarium', 'library', 'movie_theater',
+def createAttractionUserDf(data='survey_response'):
+    if type(data) == str:
+        survey = db.get_df('survey_response')
+        user_attraction = survey[['amusement_park', 'art_gallery', 'aquarium', 'library', 'movie_theater',
                               'museum', 'natural_feature', 'park', 'place_of_worship', 'shop', 'zoo']]
+    else:
+        user_attraction = data[['amusement_park', 'art_gallery', 'aquarium', 'library', 'movie_theater',
+                              'museum', 'natural_feature', 'park', 'place_of_worship', 'shop', 'zoo']]
+
     return user_attraction
 
 
@@ -17,11 +22,14 @@ def createAttractionUserDf():
 # Survey table is hardcoded
 # Returns only food columns. index is user id to be normalized and sim score
 
-def createFoodUserDf():
-    survey = db.get_df('survey_response')
-    #survey = total.copy()
-    food_user = survey[['food_one', 'food_two', 'food_three', 'food_four']]
-    
+def createFoodUserDf(data='survey_response'):
+    if type(data) == str:
+        survey = db.get_df('survey_response')
+        food_user = survey[['food_one', 'food_two', 'food_three', 'food_four']]
+
+    else:
+        food_user = data[['food_one', 'food_two', 'food_three', 'food_four']]
+            
     return food_user
 
 
@@ -34,14 +42,21 @@ def transformSurveyMain(table_name):
 
 # This will transform the survey data into all numeric
 
-def nationalityToNumeric(table_name):
-    survey = db.get_df(table_name)
-    survey.drop(columns=[''], inplace=True)
+def nationalityToNumeric(data):
+    if type(data) == str:
+        survey = db.get_df(data)
+        survey.drop(columns=[''], inplace=True)
+        survey = survey.replace({'': 'Zx'})
+
+
+    else:
+        survey = data
+        survey = survey.replace({None: 'Zx'})
+
     nationality_dict = {'Australia': 1, 'Canada': 2, 'China': 3, 'Finland': 4, 'Honduras': 5,
               'India': 6, 'Israel': 7, 'Japan': 8, 'Mexico': 9, 'Pakistan': 10, 'Philippines': 11, 'United States': 12}
 
     survey.nationality = survey.nationality.map(nationality_dict)
-    survey = survey.replace({'': 'Zx'})
     
     return survey
 

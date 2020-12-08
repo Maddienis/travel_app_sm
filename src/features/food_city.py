@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 import src.data.db_connect as db
-import utils_feature as utils
+import src.features.utils_feature as utils
 
 #main call to create df for all food entries and city
 def cityFoodMain():

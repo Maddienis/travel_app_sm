@@ -31,7 +31,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#">Maddie N</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -42,25 +42,24 @@
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">About Me</a>
+        <a class="nav-link" href="https://www.linkedin.com/in/maddie-nisbet/">LinkedIn</a>
+
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        <a class="nav-link" href="https://github.com/Maddienis/travel_app_sm">GitHub</a>
+
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-    </form>
   </div>
 </nav>
 
-  <div class="jumbotron ">
+  <div class="jumbotron-main">
+    <br><br><br>
     <h1 class="display-4">City Travel Recommender</h1>
-    <p class="lead">Just enter a couple of questions to recieve your next vacation destination.</p>
+    <p class="lead">Just answer a couple of questions to recieve your next vacation destination.</p>
     <hr class="my-4">
     
-    <br><br><br><br><br><br><br><br> 
+    <br><br><br><br><br><br><br><br><br> 
   </div>
 <!--Maybe this needs to be changed to <form>-->
 <!--<main role="main" class="container"> -->
@@ -69,14 +68,14 @@
       <h4 class="instructions">fill out all of the questions listed below </h4>
 
   </div>
-<form class="form" action="/" method="post">
+<form class="form" action="/results" method="post">
 
   <div class="form-group"> 
     <div class="input-group mb-3">
     <div class="input-group-prepend">
-      <label class="input-group-text" for="homeCountry">Which country are you from?</label>
+      <label class="input-group-text" for="nationality">Which country are you from?</label>
       </div>
-    <select class="custom-select" id="homeCountry" name="homeCountry" required>
+    <select class="custom-select" id="nationality" name="nationality" required>
         <option selected disabled value=""> Choose...</option>
         <option value="United States">United States</option>
         <option value="United Kingdom">United Kingdom</option>
@@ -369,7 +368,7 @@
   <div class="form-group">
     <div class= "input-group mb-3">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="topcity">Select your favorite cities you've</span>
+        <span class="input-group-text" id="topcity">Select your favorite 3-5 cities you've traveled to</span>
       </div>
         <!--<label class="input-group-text" for="topcity"> Choose your favorite 3-5 cities you've traveled to</label>-->
       <select class="chzn-select" multiple="true" name="topcity" style="width:200px;">
@@ -560,88 +559,88 @@
           <label> Never</label>
         </div>
     </div>
-    <div class="row food1 border-bottom">
+    <div class="row food_one border-bottom">
         <div class="col-md-1">
 
             <label>Price level 1: (Fast Food/Cheap Eats)</label><hr>
 
         </div>
         <div class="col-md-1">
-          <input type="radio" name="food1" value="always1" required>
+          <input type="radio" name="food_one" value="4" required>
         </div>
         <div class="col-md-1">
-           <input type="radio" name="food1" value="often1" required>
+           <input type="radio" name="food_one" value="3" required>
         </div>
         <div class="col-md-1">
-           <input type="radio" name="food1" value="sometimes1" required>
+           <input type="radio" name="food_one" value="2" required>
         </div>
         <div class="col-md-1">
-           <input type="radio" name="food1" value="rarely1" required>
+           <input type="radio" name="food_one" value="1" required>
         </div>
         <div class="col-md-1">
-           <input type="radio" name="food1" value="never1" required>
+           <input type="radio" name="food_one" value="0" required>
         </div>
     </div>
 
-    <div class="row food2 border-bottom">
+    <div class="row food_two border-bottom">
         <div class="col-md-1">
           <label>Price level 2: (Casual Dining)</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="food2" value="always2" required>
+          <input type="radio" name="food_two" value="4" required>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="food2" value="often2">
+          <input type="radio" name="food_two" value="3">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="food2" value="sometimes2">
+           <input type="radio" name="food_two" value="2">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="food2" value="rarely2">
+           <input type="radio" name="food_two" value="1">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="food2" value="never2">
+           <input type="radio" name="food_two" value="0">
         </div>
     </div>
 
-    <div class="row food3 border-bottom">
+    <div class="row food_three border-bottom">
         <div class="col-md-1">
           <label>Price level 3: (Casual Dining)</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="food3" value="always3" required>
+          <input type="radio" name="food_three" value="4" required>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="food3" value="often3">
+          <input type="radio" name="food_three" value="3">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="food3" value="sometimes3">
+           <input type="radio" name="food_three" value="2">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="food3" value="rarely3">
+           <input type="radio" name="food_three" value="1">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="food3" value="never3">
+           <input type="radio" name="food_three" value="0">
         </div>
     </div>
-    <div class="row food4">
+    <div class="row food_four">
         <div class="col-md-1">
           <label>Price level 4: (Fine Dining / High End)</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="food4" value="always4" required>
+          <input type="radio" name="food_four" value="4" required>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="food4" value="often4">
+          <input type="radio" name="food_four" value="3">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="food4" value="sometimes4">
+           <input type="radio" name="food_four" value="2">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="food4" value="rarely4">
+           <input type="radio" name="food_four" value="1">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="food4" value="never4">
+           <input type="radio" name="food_four" value="0">
         </div>
     </div>
   </div>
@@ -671,38 +670,38 @@
           <label> 1 (Would NOT go)</label>
         </div>
     </div>
-    <div class="row amusementpark border-bottom">
+    <div class="row amusement_park border-bottom">
         <div class="col-md-1">
           <label>Amusement Park</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="amusementpark" value="amusementpark4" required>
+          <input type="radio" name="amusement_park" value="4" required>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="amusementpark" value="amusementpark3">
+          <input type="radio" name="amusement_park" value="3">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="amusementpark" value="amusementpark2">
+           <input type="radio" name="amusement_park" value="2">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="amusementpark" value="amusementpark1">
+           <input type="radio" name="amusement_park" value="1">
         </div>
     </div>
-    <div class="row artgallery border-bottom">
+    <div class="row art_gallery border-bottom">
         <div class="col-md-1">
           <label>Art Gallery</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="artgallery" value="artgallery4" required>
+          <input type="radio" name="art_gallery" value="4" required>
         </div>
         <div class="col-md-1">
-           <input type="radio" name="artgallery" value="artgallery3">
+           <input type="radio" name="art_gallery" value="3">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="artgallery" value="artgallery2">
+           <input type="radio" name="art_gallery" value="2">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="artgallery" value="artgallery1">
+           <input type="radio" name="art_gallery" value="1">
         </div>
     </div>
 
@@ -711,16 +710,16 @@
           <label>Aquarium</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="aqarium" value="aquarium4" required>
+          <input type="radio" name="aqarium" value="4" required>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="aqarium" value="aquarium3">
+          <input type="radio" name="aqarium" value="3">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="aqarium" value="aquarium2">
+           <input type="radio" name="aqarium" value="2">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="aqarium" value="aquarium1">
+           <input type="radio" name="aqarium" value="1">
         </div>
     </div>
     <div class="row library border-bottom">
@@ -728,33 +727,33 @@
           <label>Library</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" value="library" value="library4" required>
+          <input type="radio" name="library" value="4" required>
         </div>
         <div class="col-md-1">
-          <input type="radio" value="library" value="library3">
+          <input type="radio" name="library" value="3">
         </div>
         <div class="col-md-1">
-           <input type="radio" value="library" value="library2">
+           <input type="radio" name="library" value="2">
         </div>
         <div class="col-md-1">
-           <input type="radio" value="library" value="library1">
+           <input type="radio" name="library" value="1">
         </div>
     </div>
-    <div class="row movietheater border-bottom">
+    <div class="row movie_theater border-bottom">
         <div class="col-md-1">
           <label>Movie Theater</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="movietheater" value="movietheater4" required>
+          <input type="radio" name="movie_theater" value="4" required>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="movietheater" value="movietheater3">
+          <input type="radio" name="movie_theater" value="3">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="movietheater" value="movietheater2">
+           <input type="radio" name="movie_theater" value="2">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="movietheater" value="movietheater1">
+           <input type="radio" name="movie_theater" value="1">
         </div>
     </div>
     <div class="row museum border-bottom">
@@ -762,50 +761,50 @@
           <label>Museum</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="museum" value="museum4" required>
+          <input type="radio" name="museum" value="4" required>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="museum" value="museum3">
+          <input type="radio" name="museum" value="3">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="museum" value="museum2">
+           <input type="radio" name="museum" value="2">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="museum" value="museum1">
+           <input type="radio" name="museum" value="1">
         </div>
     </div>
-    <div class="row store border-bottom">
+    <div class="row shop border-bottom">
         <div class="col-md-1">
           <label>Mall / Souvenir shop</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="store" value="store4" required>
+          <input type="radio" name="shop" value="4" required>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="store" value="store3">
+          <input type="radio" name="shop" value="3">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="store" value="store2">
+           <input type="radio" name="shop" value="2">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="store" value="store1">
+           <input type="radio" name="shop" value="1">
         </div>
     </div>
-    <div class="row naturalfeature border-bottom">
+    <div class="row natural_feature border-bottom">
         <div class="col-md-1">
           <label>Natural Feature / Beach</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="naturalfeature" value="naturalfeature4" required>
+          <input type="radio" name="natural_feature" value="4" required>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="naturalfeature" value="naturalfeature3">
+          <input type="radio" name="natural_feature" value="3">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="naturalfeature" value="naturalfeature2">
+           <input type="radio" name="natural_feature" value="2">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="naturalfeature" value="naturalfeature1">
+           <input type="radio" name="natural_feature" value="1">
         </div>
     </div>
     <div class="row park border-bottom">
@@ -813,33 +812,33 @@
           <label>Park</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="park" value="park4" required>
+          <input type="radio" name="park" value="4" required>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="park" value="park3">
+          <input type="radio" name="park" value="3">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="park" value="park2">
+           <input type="radio" name="park" value="2">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="park" value="park1">
+           <input type="radio" name="park" value="1">
         </div>
     </div>
-      <div class="row temple border-bottom">
+      <div class="row place_of_worship border-bottom">
         <div class="col-md-1">
           <label>Place of Worship (Church/Temple)</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="temple" value="temple4" required>
+          <input type="radio" name="place_of_worship" value="4" required>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="temple" value="temple3">
+          <input type="radio" name="place_of_worship" value="3">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="temple" value="temple2">
+           <input type="radio" name="place_of_worship" value="2">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="temple" value="temple1">
+           <input type="radio" name="place_of_worship" value="1">
         </div>
     </div>
       <div class="row zoo">
@@ -847,24 +846,28 @@
           <label>Zoo</label>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="zoo" value="zoo4" required>
+          <input type="radio" name="zoo" value="4" required>
         </div>
         <div class="col-md-1">
-          <input type="radio" name="zoo" value="zoo3">
+          <input type="radio" name="zoo" value="3">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="zoo" value="zoo2">
+           <input type="radio" name="zoo" value="2">
         </div>
         <div class="col-md-1">
-           <input type="radio" name="zoo" value="zoo1">
+           <input type="radio" name="zoo" value="1">
         </div>
       </div>
   </div>
-  
+  <br><br>
   <div class="form-group">
-    <input class="btn btn-secondary btn-lg float-right" type="submit" value="lets go!">
+    <input class="btn btn-secondary btn-lg float-right" type="submit" value="  lets go!  ">
+
   </div>
+  <br><br>
 </form>
+
+
 
 
 

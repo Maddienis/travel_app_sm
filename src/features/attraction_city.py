@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import ast
-import utils_feature as utils
+import src.features.utils_feature as utils
 import src.data.db_connect as db
 
 PLACE_OF_WORSHIP = ['place_of_worship', 'hindu_temple', 'church', 'mosque', 'synagogue']
@@ -19,8 +19,11 @@ def cityAttractionMain():
     attractions_df = db.get_df('attractions')
     attractions_split = splitTypes(attractions_df)
     dummy = dummies(attractions_split)
+    print('before attractionCount')
     by_city, all_attractions = attractionCount(dummy, attractions_split)
+    print('after attractionCount')
     city_group = combineAttractionTypes(by_city)
+    print("after city_group")
     city_attraction = labelEncodeAttraction(city_group)
     clean_city_attraction, city_attraction = cleanCityAttraction(city_attraction)
     
@@ -39,16 +42,23 @@ def dummies(df):
 
 
 def attractionCount(dummies_df, all_attractions_df):
-
-    all_attractions_df = pd.concat([all_attractions_df, dummies_df], axis=1)
-    type_col_names = ATTRACTIONS_TO_KEEP
-    type_col_names.extend(['country', 'city', 'id'])
-    attraction_count = all_attractions_df[type_col_names].groupby(['country', 'city', 'id']).sum()
     
+    all_attractions_df = pd.concat([all_attractions_df, dummies_df], axis=1)
+    type_col_names = []
+    print(type_col_names)
+    print("after empied")
+    type_col_names = ATTRACTIONS_TO_KEEP.copy()
+    print(type_col_names)
+    print('before')
+    type_col_names.extend(['country', 'city', 'id'])
+    print(type_col_names)
+    print('after')
+    attraction_count = all_attractions_df[type_col_names].groupby(['country', 'city', 'id']).sum()
+
     return attraction_count, all_attractions_df
 
-
 def combineAttractionTypes(city_group):
+    print("IN COMBINE ATTRACTION type")
     city_group['place_of_worship2'] = city_group['place_of_worship'] + city_group['hindu_temple'] + city_group['church'] + city_group['mosque'] + city_group['synagogue']
     city_group['store2'] = city_group['store'] + city_group['shopping_mall'] + city_group['clothing_store'] + city_group['electronics_store'] + city_group['grocery_or_supermarket'] + city_group['department_store']
     

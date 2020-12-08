@@ -73,9 +73,12 @@ def cleanMatrix(matrix):
 # This is add a rank of 1 to the users top rated cities
 
 # Melts the dataframe into user and top favorite city
-def addTopCity(table_name):
-    survey = db.get_df(table_name)
-
+def addTopCity(data):
+    if type(data) == str:
+        survey = db.get_df(data)
+    else:
+        survey = data
+        
     top_city = survey[['favorite_city_one', 'favorite_city_two', 'favorite_city_three', 'favorite_city_four', 'favorite_city_five']].copy()
     
     top_city.reset_index(inplace=True)
