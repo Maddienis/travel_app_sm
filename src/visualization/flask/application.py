@@ -4,7 +4,7 @@ from flask import Flask, render_template, request, redirect, url_for
 import src.features.predict_features as predict_features
 import src.data.db_connect as db
 
-app = Flask(__name__)
+application = Flask(__name__)
 
 # @app.route('/')
 # def hello_world():
@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 
 # Can add /home or leave it. 
-@app.route('/', methods=['GET', 'POST'])
+@application.route('/', methods=['GET', 'POST'])
 def index():
 	
 	return render_template('starter_template_new.html')
@@ -32,7 +32,7 @@ def index():
 #return redirect(url_for('recommend', data=df)
 
 #@app.route('/', methods=["GET", "POST"])
-@app.route('/results', methods=['POST'])
+@application.route('/results', methods=['POST'])
 def results():
 	if request.method == "POST":
 		d = request.form.to_dict()
