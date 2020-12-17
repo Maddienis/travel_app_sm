@@ -19,11 +19,8 @@ def cityAttractionMain():
     attractions_df = db.get_df('attractions')
     attractions_split = splitTypes(attractions_df)
     dummy = dummies(attractions_split)
-    print('before attractionCount')
     by_city, all_attractions = attractionCount(dummy, attractions_split)
-    print('after attractionCount')
     city_group = combineAttractionTypes(by_city)
-    print("after city_group")
     city_attraction = labelEncodeAttraction(city_group)
     clean_city_attraction, city_attraction = cleanCityAttraction(city_attraction)
     
@@ -45,14 +42,8 @@ def attractionCount(dummies_df, all_attractions_df):
     
     all_attractions_df = pd.concat([all_attractions_df, dummies_df], axis=1)
     type_col_names = []
-    print(type_col_names)
-    print("after empied")
     type_col_names = ATTRACTIONS_TO_KEEP.copy()
-    print(type_col_names)
-    print('before')
     type_col_names.extend(['country', 'city', 'id'])
-    print(type_col_names)
-    print('after')
     attraction_count = all_attractions_df[type_col_names].groupby(['country', 'city', 'id']).sum()
 
     return attraction_count, all_attractions_df

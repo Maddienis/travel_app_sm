@@ -93,6 +93,7 @@ def transformUserInput(df, top_city_list, continent):
 
 
 def displayCity(selected_df):
+	print(selected_df)
 	
 	city1 = selected_df.index[0][1]
 	city2 = selected_df.index[1][1]

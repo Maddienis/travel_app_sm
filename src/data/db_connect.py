@@ -2,7 +2,7 @@ import sqlite3
 import pandas as pd
 import mysql.connector
 import os
-from flaskext.mysql import MySQL
+#from flaskext.mysql import MySQL
 
 
 if 'RDS_HOTNAME' in os.environ:
@@ -88,7 +88,6 @@ def get_df(table_name):
         print('Error durring connection: ', str(e))
     
     sql = """select * from {}""".format(table_name)
-    print(sql)
     df = pd.read_sql(sql, db_connect)
 
     return df

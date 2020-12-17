@@ -7,9 +7,10 @@ import src.data.db_connect as db
 
 
 # Main function call
-def createSimMatrixMain(table_name, cosine_sim_food, cosine_sim_attraction, food_df_city_name):
+def createSimMatrixMain(user_data, cosine_sim_food, cosine_sim_attraction, food_df_city_name):
     
-    top_city_melt = addTopCity(table_name)
+    top_city_melt = addTopCity(user_data)
+    print(top_city_melt, 'top_city_melt')
     top_city_no_na = dropNullRankCity(top_city_melt)
     
     sim_df = createUserCitySimMatrix(cosine_sim_food, food_df_city_name)

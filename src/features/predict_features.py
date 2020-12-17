@@ -12,6 +12,7 @@ import src.features.city_combine as city_combine
 
 def createPredictFeatures(user_data):
 	
+	print(user_data, 'user_data')
 	food_city, food_city_name = fc.cityFoodMain()
 	food_user = survey_user.createFoodUserDf()
 	cosine_sim_food = sim_score.simScore(food_city, food_user)
@@ -39,16 +40,16 @@ def columnSelection(completed_matrix):
 	completed_matrix.sort_values('rank', ascending=False, inplace=True)
 	
 	slim_matrix = completed_matrix[['continent_city', 'food_sim', 'attraction_sim', 'sum', 'rank']].copy()
-	slim_matrix = completed_matrix.drop(completed_matrix[completed_matrix['rank'] == 1.0].index)
+	slim_matrix_drop = slim_matrix.drop(slim_matrix[slim_matrix['rank'] == 1.0].index)
 
-	slim_matrix.sort_values('sum', ascending=False, inplace=True)
+	slim_matrix_drop.sort_values('sum', ascending=False, inplace=True)
 
 
-	return slim_matrix
+	return slim_matrix_drop
 
 
 def citySelection(slim_matrix, continent):
-
+	print(slim_matrix, "top slim_matrix")
 	if continent == 'anywhere':
 		top_choice = slim_matrix.head(3)
 	else:

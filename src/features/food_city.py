@@ -24,8 +24,7 @@ def createFoodDf():
     two = db.get_df('restaurants_two')
     three = db.get_df('restaurants_three')
     four = db.get_df('restaurants_four')
-    top_rest = db.get_df('restaurants')
-    
+    top_rest = db.get_df('restaurants')    
     all_price = pd.concat([one, two, three, four, top_rest], axis =0)
     return(all_price)
 
@@ -33,9 +32,6 @@ def createFoodDf():
 # This will fill price level null values that is the mean of the total restaurants for that city
 # If that still does not fill it, it will fill with 2.
 def cleaningNullsCity(restaurants_all):
-    print('cleaning city nulls')
-    print(restaurants_all['price_level'])
-    print(restaurants_all[restaurants_all['price_level'] == 'Macau'])
     restaurants_all['id'] = pd.to_numeric(restaurants_all.id)
     restaurants_all['price_level'] = pd.to_numeric(restaurants_all.price_level)
     restaurants_all['price_level'] = restaurants_all['price_level'].fillna(restaurants_all.groupby('city')['price_level'].transform('mean'))
@@ -66,11 +62,10 @@ def addNanRowCity(food_df):
     food_df.reset_index(inplace=True)
     nan_row = {'country' : None, 'city': 'Zx', 'id': 200, 1.0: 0, 2.0: 0, 3.0: 0, 4.0: 0}
     food_df = food_df.append(nan_row, ignore_index=True)
-    
     global food_new 
     food_new = labelEncodeCity(food_df)
     food_new = food_new.drop(food_new[food_new.id == 200].index)
-    
+
     return food_new
 
 
