@@ -33,8 +33,11 @@ def createFoodDf():
 # This will fill price level null values that is the mean of the total restaurants for that city
 # If that still does not fill it, it will fill with 2.
 def cleaningNullsCity(restaurants_all):
-    
+    print('cleaning city nulls')
+    print(restaurants_all['price_level'])
+    print(restaurants_all[restaurants_all['price_level'] == 'Macau'])
     restaurants_all['id'] = pd.to_numeric(restaurants_all.id)
+    restaurants_all['price_level'] = pd.to_numeric(restaurants_all.price_level)
     restaurants_all['price_level'] = restaurants_all['price_level'].fillna(restaurants_all.groupby('city')['price_level'].transform('mean'))
     restaurants_all.fillna(2.0, inplace=True)
     #do I need this?
