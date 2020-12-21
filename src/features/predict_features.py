@@ -14,12 +14,12 @@ def createPredictFeatures(user_data):
 	
 	print(user_data, 'user_data')
 	food_city, food_city_name = fc.cityFoodMain()
-	food_user = survey_user.createFoodUserDf()
+	food_user = survey_user.createFoodUserDf(user_data)
 	cosine_sim_food = sim_score.simScore(food_city, food_user)
 	
 	city_attraction, city_attraction_with_country = attraction_city.cityAttractionMain()
 	#temp = attraction_city.cityAttractionMain()
-	user_attraction = survey_user.createAttractionUserDf()    
+	user_attraction = survey_user.createAttractionUserDf(user_data)    
 	cosine_sim_attraction = sim_score.simScore(city_attraction, user_attraction)
 	
 	full_sim_matrix = build_sim.createSimMatrixMain(user_data, cosine_sim_food, cosine_sim_attraction, food_city_name)

@@ -11,6 +11,8 @@ def createAttractionUserDf(data='survey_response'):
         user_attraction = survey[['amusement_park', 'art_gallery', 'aquarium', 'library', 'movie_theater',
                               'museum', 'natural_feature', 'park', 'place_of_worship', 'shop', 'zoo']]
     else:
+        print(data)
+        print("INSIDE ELSE")
         user_attraction = data[['amusement_park', 'art_gallery', 'aquarium', 'library', 'movie_theater',
                               'museum', 'natural_feature', 'park', 'place_of_worship', 'shop', 'zoo']]
 

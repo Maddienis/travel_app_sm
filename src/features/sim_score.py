@@ -13,14 +13,14 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 def simScore(city, user):
 
-    normalized_city = pd.DataFrame(pp.normalize(city))    
-    normalized_user = pd.DataFrame(pp.normalize(user))
+	print(city, 'city')
+	print(user, 'user')
+	normalized_city = pd.DataFrame(pp.normalize(city))
+	normalized_user = pd.DataFrame(pp.normalize(user))
 
 
-    sim_city = pd.DataFrame(cosine_similarity(normalized_city))
-    sim_user = pd.DataFrame(cosine_similarity(normalized_user))
-    
-    cosine_sim_food = pd.DataFrame(cosine_similarity(normalized_user, normalized_city))
+	sim_city = pd.DataFrame(cosine_similarity(normalized_city))
+	sim_user = pd.DataFrame(cosine_similarity(normalized_user))
+	cosine_sim_food = pd.DataFrame(cosine_similarity(normalized_user, normalized_city))
 
-    
-    return cosine_sim_food
+	return cosine_sim_food
