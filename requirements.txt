@@ -1,7 +1,7 @@
 pandas==1.0.1
 Flask==1.1.1
 pycountry_convert==0.7.2
-numpy==1.18.1
+numpy==1.22.0
 Click==7.0
 requests==2.20.1
 seaborn==0.10.0
